@@ -9,7 +9,7 @@
 class PhoneBook
 {
 public:
-	PhoneBook();
+	PhoneBook(void);
 
 	int			AddContact(void);
 	int			ShowContact(void);

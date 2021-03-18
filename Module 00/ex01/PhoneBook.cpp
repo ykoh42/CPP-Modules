@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook()
+PhoneBook::PhoneBook(void)
 	: mIndex(0)
 {
 	mField[0] = "FIRST NAME";
