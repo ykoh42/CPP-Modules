@@ -6,7 +6,7 @@
 | EX | PROGRAM | DESCRIPTION |
 |-|-|-|
 | ex00 | megaphone | converts to upper string. |
-| ex01 | megaphone | 
+| ex01 | phonebook | behaves like a `crappy` awesome phonebook software. |
 
 ### Namespace
  - 대규모 프로젝트에서 이름 충돌을 방지하는 방법을 제공.
