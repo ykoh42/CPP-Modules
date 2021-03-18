@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	PhoneBook   PhoneBook;
+	PhoneBook   phoneBook;
 	std::string cmd;
 
 	while (true)
@@ -20,7 +20,7 @@ int main(void)
 		}
 		else if (cmd.compare("ADD") == 0)
 		{
-			if (PhoneBook.AddContact() == 0)
+			if (phoneBook.AddContact() == 0)
 			{
 				std::cout << std::endl << "PROGRAM EXIT!" << std::endl;
 				break ;
@@ -28,7 +28,7 @@ int main(void)
 		}
 		else if (cmd.compare("SEARCH") == 0)
 		{
-			if (PhoneBook.ShowContact() == 0)
+			if (phoneBook.ShowContact() == 0)
 			{
 				std::cout << std::endl << "PROGRAM EXIT!" << std::endl;
 				break ;
