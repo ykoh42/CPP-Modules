@@ -2,7 +2,7 @@
 
 void	ponyOnTheHeap(void)
 {
-	Pony	*pony;
+	Pony*	pony;
 
 	pony = new Pony("🐴");
 	pony->Cry();
