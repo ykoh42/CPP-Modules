@@ -1,9 +1,8 @@
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook()
+	: mIndex(0)
 {
-	mIndex = 0;
-
 	mField[0] = "FIRST NAME";
 	mField[1] = "LAST NAME";
 	mField[2] = "NICKNAME";
