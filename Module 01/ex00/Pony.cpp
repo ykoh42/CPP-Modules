@@ -1,7 +1,7 @@
 #include "Pony.hpp"
 
-Pony::Pony(const std::string& str)
-	: name(str)
+Pony::Pony(const std::string& name)
+	: name(name)
 {
 	std::cout << name << " was born!" << std::endl;
 
