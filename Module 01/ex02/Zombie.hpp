@@ -7,17 +7,13 @@
 class Zombie
 {
 public:
-	// Zombie(void);
-	Zombie(std::string const &type, std::string const &name);
-	// virtual ~Zombie();
+	Zombie(const std::string& type, const std::string& name);
 
-	// void setCharacteristics(std::string const &type, std::string const &name);
-	// static std::string randomName(std::string::size_type length);
 	void announce(void) const;
 
 private:
-	std::string	type;
-	std::string	name;
+	const std::string	type;
+	const std::string	name;
 };
 
 #endif
