@@ -6,8 +6,8 @@
 class Contact
 {
 public:
-	void				SetDataByIndex(const int index, const std::string& data);
-	const std::string&	GetDataByIndex(const int index) const;
+	void				SetDataByIndex(const int index, const std::string data);
+	const std::string	GetDataByIndex(const int index) const;
 
 private:
 	std::string mData[11];
