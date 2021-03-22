@@ -16,7 +16,7 @@ public:
 
 private:
 	int					mValue;
-	const static int	bits = 8;
+	static const int	bits = 8;
 };
 
 #endif

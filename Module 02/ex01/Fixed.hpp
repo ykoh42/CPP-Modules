@@ -19,7 +19,7 @@ public:
 	int					toInt(void) const;
 private:
 	int					mValue;
-	const static int	bits = 8;
+	static const int	bits = 8;
 };
 
 std::ostream&			operator<<(std::ostream& os, const Fixed& fixed);
