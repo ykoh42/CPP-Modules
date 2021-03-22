@@ -18,10 +18,10 @@ Fixed::Fixed(const float value)
 	mValue = roundf(value * (1 << bits));
 }
 
-Fixed::Fixed(const Fixed& fixed)
+Fixed::Fixed(const Fixed& other)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = fixed;
+	*this = other;
 }
 
 Fixed::~Fixed(void)
@@ -29,10 +29,10 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed& 			Fixed::operator=(const Fixed& fixed)
+Fixed& 			Fixed::operator=(const Fixed& other)
 {
 	std::cout << "Assignation operator called" << std::endl;
-	mValue = fixed.mValue;
+	mValue = other.mValue;
 	return (*this);
 }
 

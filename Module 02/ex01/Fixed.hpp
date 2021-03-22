@@ -9,10 +9,10 @@ public:
 	Fixed(void);
 	Fixed(const int value);
 	Fixed(const float value);
-	Fixed(const Fixed& fixed);
+	Fixed(const Fixed& other);
 	~Fixed(void);
 
-	Fixed&				operator=(const Fixed& fixed);
+	Fixed&				operator=(const Fixed& other);
 	int					getRawBits(void) const;
 	void				setRawBits(int const raw);
 	float				toFloat(void) const;
