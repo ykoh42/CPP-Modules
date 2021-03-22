@@ -11,8 +11,8 @@ public:
 	void attack(void) const;
 
 private:
-	std::string		mName;
-	const Weapon&	mWeapon;
+	const std::string	name;
+	const Weapon&		weapon;
 };
 
 #endif

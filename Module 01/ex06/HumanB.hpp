@@ -9,11 +9,11 @@ public:
 	HumanB(const std::string& name);
 
 	void	attack(void) const;
-	void	HumanB::setWeapon(const Weapon& weapon);
+	void	setWeapon(const Weapon& weapon);
 
 private:
-	std::string		mName;
-	const Weapon*	mWeapon;
+	const std::string	name;
+	const Weapon*		weapon;
 };
 
 #endif

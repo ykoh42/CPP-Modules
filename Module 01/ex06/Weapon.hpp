@@ -12,7 +12,7 @@ public:
 	const std::string&	getType(void) const;
 
 private:
-	std::string	mType;
+	std::string	type;
 };
 
 #endif
