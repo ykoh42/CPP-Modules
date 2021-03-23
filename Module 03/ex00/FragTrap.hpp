@@ -21,12 +21,12 @@ private:
     std::string         mName;
     int                 mHitPoints;
     int                 mEnergyPoints;
-    const int           mMaxHitPoints;
-    const int           mMaxEnergyPoints;
-    const int           mLevel;
-    const int           mMeleeAttackDamage;
-    const int           mRangedAttackDamage;
-    const int           mArmorDamageReduction;
+    int                 mMaxHitPoints;
+    int                 mMaxEnergyPoints;
+    int                 mLevel;
+    int                 mMeleeAttackDamage;
+    int                 mRangedAttackDamage;
+    int                 mArmorDamageReduction;
     static std::string  mList[5];
 
     const int&          getHitPoints(void) const;
