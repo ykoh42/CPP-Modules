@@ -2,6 +2,22 @@
 
 std::string FragTrap::mList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
 
+FragTrap::FragTrap(void)
+    : mName("undefined")
+    , mHitPoints(100)
+    , mEnergyPoints(100)
+    , mMaxHitPoints(100)
+    , mMaxEnergyPoints(100)
+    , mLevel(1)
+    , mMeleeAttackDamage(30)
+    , mRangedAttackDamage(20)
+    , mArmorDamageReduction(5)
+{
+    srand(time(NULL));
+    std::cout << mName
+                << " is booted! HURRAY!" << std::endl;
+}
+
 FragTrap::FragTrap(const std::string& name)
     : mName(name)
     , mHitPoints(100)

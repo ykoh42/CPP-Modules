@@ -2,6 +2,22 @@
 
 std::string ScavTrap::mList[5] = {"Money", "Water", "Invisibility Cloak", "Time machine", "Portal"};
 
+ScavTrap::ScavTrap(void)
+    : mName("undefined")
+    , mHitPoints(100)
+    , mEnergyPoints(50)
+    , mMaxHitPoints(100)
+    , mMaxEnergyPoints(50)
+    , mLevel(1)
+    , mMeleeAttackDamage(20)
+    , mRangedAttackDamage(15)
+    , mArmorDamageReduction(3)
+{
+    srand(time(NULL));
+    std::cout << mName
+                << " 출격 준비 완료!" << std::endl;
+}
+
 ScavTrap::ScavTrap(const std::string& name)
     : mName(name)
     , mHitPoints(100)
