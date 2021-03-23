@@ -36,9 +36,15 @@ FragTrap::FragTrap(const FragTrap& other)
 
 FragTrap&   FragTrap::operator=(const FragTrap& other)
 {
-    mHitPoints = other.mHitPoints;
-    mEnergyPoints = other.mHitPoints;
     mName = other.mName;
+    mHitPoints = other.mHitPoints;
+    mEnergyPoints = other.mEnergyPoints;
+    mMaxHitPoints = other.mMaxHitPoints;
+    mMaxEnergyPoints = other.mMaxEnergyPoints;
+    mLevel = other.mLevel;
+    mMeleeAttackDamage = other.mMeleeAttackDamage;
+    mRangedAttackDamage = other.mRangedAttackDamage;
+    mArmorDamageReduction = other.mArmorDamageReduction;
     return (*this);
 }
 
