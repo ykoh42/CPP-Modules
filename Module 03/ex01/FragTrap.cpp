@@ -84,8 +84,7 @@ void        FragTrap::takeDamage(unsigned int amount)
         mHitPoints -= damage;
         if (mHitPoints > 0)
         {
-            std::cout << "FR4G-TP "
-                        << "<" << mName << ">"
+            std::cout << "<" << mName << ">"
                         << " takes "
                         << "<" << damage << ">"
                         << " damages! " << std::endl;
@@ -93,8 +92,7 @@ void        FragTrap::takeDamage(unsigned int amount)
         else
         {
             mHitPoints = 0;
-            std::cout << "FR4G-TP "
-                        << "<" << mName << ">"
+            std::cout << "<" << mName << ">"
                         << " is broken! " << std::endl;
         }
     }
@@ -107,8 +105,7 @@ void        FragTrap::beRepaired(unsigned int amount)
     {
         mHitPoints = mMaxHitPoints;
     }
-    std::cout << "FR4G-TP "
-                << "<" << mName << "> "
+    std::cout << "<" << mName << "> "
                 << "has been repaired!"
                 << " <" <<  mHitPoints << ">" << std::endl;
 }
