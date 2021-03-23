@@ -27,7 +27,7 @@ private:
     const int           mMeleeAttackDamage;
     const int           mRangedAttackDamage;
     const int           mArmorDamageReduction;
-    static std::string  mAttackList[5];
+    static std::string  mList[5];
 
     const int&          getHitPoints(void) const;
 };

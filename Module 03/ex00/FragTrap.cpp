@@ -1,6 +1,6 @@
 #include "FragTrap.hpp"
 
-std::string FragTrap::mAttackList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
+std::string FragTrap::mList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
 
 FragTrap::FragTrap(const std::string& name)
     : mName(name)
@@ -132,7 +132,7 @@ void        FragTrap::vaulthunter_dot_exe(std::string const & target)
                         << "<" << mName << ">"
                         << " attacks "
                         << "<" << target << ">"
-                        << " at " << mAttackList[rand() % 5] << ", causing "
+                        << " at " << mList[rand() % 5] << ", causing "
                         << "<" << 0 << ">"
                         << " points of damage! USELESS!" << std::endl;
         }
