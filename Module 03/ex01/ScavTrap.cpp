@@ -35,17 +35,9 @@ ScavTrap::ScavTrap(const std::string& name)
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
-    : mName(other.mName)
-    , mHitPoints(other.mHitPoints)
-    , mEnergyPoints(other.mEnergyPoints)
-    , mMaxHitPoints(other.mMaxHitPoints)
-    , mMaxEnergyPoints(other.mMaxEnergyPoints)
-    , mLevel(other.mLevel)
-    , mMeleeAttackDamage(other.mMeleeAttackDamage)
-    , mRangedAttackDamage(other.mRangedAttackDamage)
-    , mArmorDamageReduction(other.mArmorDamageReduction)
 {
     srand(time(NULL));
+    *this = other;
     std::cout << mName
             << " 출격 준비 완료!" << std::endl;
 }

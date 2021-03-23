@@ -35,17 +35,9 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& other)
-    : mName(other.mName)
-    , mHitPoints(other.mHitPoints)
-    , mEnergyPoints(other.mEnergyPoints)
-    , mMaxHitPoints(other.mMaxHitPoints)
-    , mMaxEnergyPoints(other.mMaxEnergyPoints)
-    , mLevel(other.mLevel)
-    , mMeleeAttackDamage(other.mMeleeAttackDamage)
-    , mRangedAttackDamage(other.mRangedAttackDamage)
-    , mArmorDamageReduction(other.mArmorDamageReduction)
 {
     srand(time(NULL));
+    *this = other;
     std::cout << mName
             << " is booted! HURRAY!" << std::endl;
 }
