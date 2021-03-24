@@ -84,12 +84,27 @@
  - 이름이 같음 함수여도 인수의 유형에 따라 다양한 구현 가능.
 
 ### canonical classes
-
+ - default constructor
+ - copy constructor
+ - operator=
+ - destructor
 
 ## Module 03
 Inheritance
+
 ## Module 04
-Subtype polymorphism, abstract classes, interfaces
+| Excercise | What I learned |
+|-|-|-|
+| ex00 | virtual member function |
+| ex01 | pure virtual functions, virtual destructor, overriding |
+| ex02 | abstract classes |
+| ex03 |  |
+
+### Subtype polymorphism
+ - https://www.cplusplus.com/doc/tutorial/polymorphism/
+### abstract classes
+### interfaces
+
 ## Module 05
 Repetition and Exceptions
 ## Module 06
