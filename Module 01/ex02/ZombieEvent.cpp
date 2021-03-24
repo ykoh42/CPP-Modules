@@ -1,6 +1,6 @@
 #include "ZombieEvent.hpp"
 
-ZombieEvent::ZombieEvent()
+ZombieEvent::ZombieEvent(void)
 {
 	std::srand(std::time(NULL));
 }
