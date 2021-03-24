@@ -3,6 +3,10 @@
 # Contents
 
 ## Module 00
+| Excercise | What I learned |
+|-|-|-|
+| ex00 | iostream, string |
+| ex01 | class |
 
 ### Namespace
  - 대규모 프로젝트에서 이름 충돌을 방지하는 방법을 제공.
@@ -48,6 +52,17 @@
  - `inheritance` 받은 `member variable`을 초기화 할때.
 
 ## Module 01
+| Excercise | What I learned |
+|-|-|-|
+| ex00 | Allocation on heap, new |
+| ex01 | Free memory, delete |
+| ex02 | Memory allocation |
+| ex03 | new[], destructor |
+| ex04 | pointer, reference |
+| ex05 | object reference return |
+| ex06 | reference vs pointer, NULL |
+| ex07 | fstream |
+
 ### Memory allocation
  - 메모리 할당시 `new` 키워드 사용.
  - 메모리 해제 `delete` 키워드 사용.
@@ -58,9 +73,11 @@
  - `NULL` 값을 가지는게 아니라면 `reference`를 사용하는 것이 좋음.
 
 ### Pointers to members
+ - 일반 포인터는 메모리 상의 `임의의 지점`을 가리키지만, 멤버를 가리키는 포인터는 `객체 내 한 지점`만을 가리킴.
 
 ### File streams
  - http://www.cplusplus.com/reference/fstream/fstream/
+
 
 ## Module 02
 ### Ad-hoc polymorphism and operators overload
@@ -68,11 +85,6 @@
 
 ### canonical classes
 
-ex00 : stack과 heap 에 객체 할당 with new
-ex01 : 메모리 누수 방지 with delete
-ex02 : 동적할당 연습
-ex03 : 동적 할당 with new[] and 소멸자
-ex04 : pointer and reference
 
 ## Module 03
 Inheritance
