@@ -27,7 +27,7 @@ ZombieHorde::ZombieHorde(const int size)
 	}
 }
 
-ZombieHorde::~ZombieHorde()
+ZombieHorde::~ZombieHorde(void)
 {
 	delete[] mHorde;
 }

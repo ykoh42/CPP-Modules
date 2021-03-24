@@ -7,7 +7,7 @@
 class Brain
 {
 public:
-	Brain();
+	Brain(void);
 
 	int			GetIQ(void) const;
 	std::string	identify(void) const;

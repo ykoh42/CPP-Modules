@@ -7,7 +7,7 @@ class ZombieHorde
 {
 public:
 	ZombieHorde(const int size);
-	~ZombieHorde();
+	~ZombieHorde(void);
 
 	void		announce(void) const;
 
