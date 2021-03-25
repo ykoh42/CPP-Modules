@@ -4,7 +4,7 @@
 
 ## Module 00
 | Excercise | What I learned |
-|-|-|-|
+|-|-|
 | ex00 | iostream, string |
 | ex01 | class |
 
@@ -53,7 +53,7 @@
 
 ## Module 01
 | Excercise | What I learned |
-|-|-|-|
+|-|-|
 | ex00 | Allocation on heap, new |
 | ex01 | Free memory, delete |
 | ex02 | Memory allocation |
@@ -94,7 +94,7 @@ Inheritance
 
 ## Module 04
 | Excercise | What I learned |
-|-|-|-|
+|-|-|
 | ex00 | virtual member function |
 | ex01 | pure virtual functions, virtual destructor, overriding |
 | ex02 | abstract classes |
