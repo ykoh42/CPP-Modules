@@ -115,7 +115,6 @@ void        FragTrap::takeDamage(unsigned int amount)
             std::cout << "<" << mName << ">"
                         << " was already broken! " << std::endl;
     }
-    
 }
 
 void        FragTrap::beRepaired(unsigned int amount)
