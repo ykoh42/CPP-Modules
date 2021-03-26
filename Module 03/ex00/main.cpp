@@ -21,7 +21,10 @@ int main(void)
     b.takeDamage(30);
     std::cout << "------------------------------------" << std::endl;
     std::cout << "HP : " << b.getHitPoints() << std::endl;
-    b.beRepaired(10);
+    b.beRepaired(50);
+    b.beRepaired(50);
+    std::cout << "HP : " << b.getHitPoints() << std::endl;
+    b.beRepaired(50);
     std::cout << "HP : " << b.getHitPoints() << std::endl;
     std::cout << "------------------------------------" << std::endl;
     b.vaulthunter_dot_exe("b");
