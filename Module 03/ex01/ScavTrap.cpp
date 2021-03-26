@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-std::string ScavTrap::mList[5] = {"Money", "Water", "Invisibility Cloak", "Time machine", "Portal"};
+std::string ScavTrap::mList[5] = {"navy seal", "programmer", "superhero", "astronaut", "saint"};
 
 ScavTrap::ScavTrap(void)
     : mName("undefined")
@@ -15,7 +15,7 @@ ScavTrap::ScavTrap(void)
 {
     srand(time(NULL));
     std::cout << mName
-                << " 출격 준비 완료!" << std::endl;
+                << " : What do U need?" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name)
@@ -31,7 +31,7 @@ ScavTrap::ScavTrap(const std::string& name)
 {
     srand(time(NULL));
     std::cout << mName
-                << " 출격 준비 완료!" << std::endl;
+                << " : What do U need?" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
@@ -39,7 +39,7 @@ ScavTrap::ScavTrap(const ScavTrap& other)
     srand(time(NULL));
     *this = other;
     std::cout << mName
-            << " 출격 준비 완료!" << std::endl;
+            << " : What do U need?" << std::endl;
 }
 
 ScavTrap&   ScavTrap::operator=(const ScavTrap& other)
@@ -58,7 +58,7 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap& other)
 
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "자폭합니다!!" << std::endl;
+    std::cout << "Suicide bombing!! BOOM!!" << std::endl;
 }
 
 void        ScavTrap::rangedAttack(std::string const & target)
@@ -110,6 +110,11 @@ void        ScavTrap::takeDamage(unsigned int amount)
                         << " is broken! " << std::endl;
         }
     }
+    else
+    {
+            std::cout << "<" << mName << ">"
+                        << " was already broken! " << std::endl;
+    }
 }
 
 void        ScavTrap::beRepaired(unsigned int amount)
@@ -141,8 +146,8 @@ void        ScavTrap::challengeNewcomer(std::string const & target)
             }
             std::cout << "SC4B-TP "
                         << "<" << mName << ">"
-                        << " invented "
-                        << "\"" << mList[rand() % 5] << "\"" << " for "
+                        << " Challenges to become a "
+                        << "\"" << mList[rand() % 5] << "\"" << " with "
                         << "<" << target << ">"
                         << "! Cool!" << std::endl;
         }

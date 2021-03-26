@@ -17,6 +17,7 @@ public:
     void                takeDamage(unsigned int amount);
     void                beRepaired(unsigned int amount);
     void                vaulthunter_dot_exe(std::string const & target);
+    const int&          getHitPoints(void) const;
 
 private:
     std::string         mName;
@@ -30,7 +31,6 @@ private:
     int                 mArmorDamageReduction;
     static std::string  mList[5];
 
-    const int&          getHitPoints(void) const;
 };
 
 
