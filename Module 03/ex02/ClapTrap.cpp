@@ -80,6 +80,11 @@ void        ClapTrap::takeDamage(unsigned int amount)
                         << " is broken! " << std::endl;
         }
     }
+    else
+    {
+            std::cout << "<" << mName << ">"
+                        << " was already broken! " << std::endl;
+    }
 }
 
 void        ClapTrap::beRepaired(unsigned int amount)
