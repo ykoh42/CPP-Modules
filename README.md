@@ -51,6 +51,8 @@
  - `class`에 member로 다른 `class`의 `instance`를 포함할 때.
  - `inheritance` 받은 `member variable`을 초기화 할때.
 
+---
+
 ## Module 01
 | Excercise | What I learned |
 |-|-|
@@ -78,19 +80,36 @@
 ### File streams
  - http://www.cplusplus.com/reference/fstream/fstream/
 
+---
 
 ## Module 02
+| Excercise | What I learned |
+|-|-|
+| ex00 | canonical classes, operators overload |
+| ex01 | Ad-hoc polymorphism |
+
 ### Ad-hoc polymorphism and operators overload
  - 이름이 같음 함수여도 인수의 유형에 따라 다양한 구현 가능.
 
 ### canonical classes
- - default constructor
- - copy constructor
- - operator=
- - destructor
+- A default constructor
+- A destructor
+- A copy constructor
+- An assignation operator
+
+---
 
 ## Module 03
-Inheritance
+| Excercise | What I learned |
+|-|-|
+| ex00, ex01 | The need for inheritance |
+| ex02, ex03 | inheritance |
+| ex04 | Multiple inheritance |
+
+### Inheritance
+ - `base class`에서 파생된 `sub class`를 만들 수 있음
+
+---
 
 ## Module 04
 | Excercise | What I learned |
@@ -102,7 +121,9 @@ Inheritance
 
 ### Subtype polymorphism
  - https://www.cplusplus.com/doc/tutorial/polymorphism/
+
 ### abstract classes
+
 ### interfaces
 
 ## Module 05
