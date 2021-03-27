@@ -26,7 +26,7 @@ Turtle::~Turtle(void)
 
 void    Turtle::getPolymorphed(void) const
 {
-    std::cout << mName << " has been turned into a pink pony!" << std::endl;
+    std::cout << mName << " has been turned into a cute rabbit!" << std::endl;
 }
 
 Turtle&   Turtle::operator=(const Turtle& other)

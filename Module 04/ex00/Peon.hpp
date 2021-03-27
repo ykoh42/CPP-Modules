@@ -9,7 +9,7 @@ public:
 	Peon(void);
 	Peon(const Peon& other);
 	Peon(const std::string& name);
-	~Peon();
+	virtual ~Peon();
 
 	Peon&   operator=(const Peon& other);
 

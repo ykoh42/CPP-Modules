@@ -9,7 +9,7 @@ public:
 	Turtle(void);
 	Turtle(const Turtle& other);
 	Turtle(const std::string& name);
-	~Turtle();
+	virtual ~Turtle();
 
 	Turtle&   operator=(const Turtle& other);
 

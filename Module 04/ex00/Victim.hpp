@@ -9,7 +9,7 @@ public:
 	Victim(void);
 	Victim(const Victim& other);
 	Victim(const std::string& name);
-	~Victim(void);
+	virtual ~Victim(void);
 
 	Victim&             operator=(const Victim& other);
 
