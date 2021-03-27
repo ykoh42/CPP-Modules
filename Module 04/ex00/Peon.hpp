@@ -13,10 +13,8 @@ public:
 
 	Peon&   operator=(const Peon& other);
 
-
 private:
     void    getPolymorphed(void) const;
-
 };
 
 #endif

@@ -1,11 +1,13 @@
 #include "Peon.hpp"
 
 Peon::Peon(void)
+    : Victim()
 {
     std::cout << "Zog zog." << std::endl;
 }
 
 Peon::Peon(const Peon& other)
+    : Victim(other)
 {
     *this = other;
     std::cout << "Zog zog." << std::endl;
