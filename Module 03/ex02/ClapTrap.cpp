@@ -40,7 +40,12 @@ ClapTrap::ClapTrap(const ClapTrap& other)
                 << " Base Trap is ready!" << std::endl;
 }
 
-ClapTrap&   ClapTrap::operator=(const ClapTrap& other)
+ClapTrap::~ClapTrap(void)
+{
+    std::cout << mName << " Base Trap is done!" << std::endl;
+}
+
+ClapTrap&           ClapTrap::operator=(const ClapTrap& other)
 {
     mName = other.mName;
     mHitPoints = other.mHitPoints;
@@ -54,12 +59,7 @@ ClapTrap&   ClapTrap::operator=(const ClapTrap& other)
     return (*this);
 }
 
-ClapTrap::~ClapTrap(void)
-{
-    std::cout << mName << " Base Trap is done!" << std::endl;
-}
-
-void        ClapTrap::takeDamage(unsigned int amount)
+void                ClapTrap::takeDamage(unsigned int amount)
 {
     if (getHitPoints() > 0)
     {
@@ -91,7 +91,7 @@ void        ClapTrap::takeDamage(unsigned int amount)
     }
 }
 
-void        ClapTrap::beRepaired(unsigned int amount)
+void                ClapTrap::beRepaired(unsigned int amount)
 {
     mHitPoints += amount;
     if (mHitPoints > mMaxHitPoints)
@@ -103,7 +103,12 @@ void        ClapTrap::beRepaired(unsigned int amount)
                 << " <" <<  mHitPoints << ">" << std::endl;
 }
 
-const int&  ClapTrap::getHitPoints(void) const
+const int&          ClapTrap::getHitPoints(void) const
 {
     return (mHitPoints);
+}
+
+const std::string&  ClapTrap::getName(void) const
+{
+    return (mName);
 }
