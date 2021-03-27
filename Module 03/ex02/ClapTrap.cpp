@@ -65,6 +65,10 @@ void        ClapTrap::takeDamage(unsigned int amount)
     {
         int damage = amount - mArmorDamageReduction;
 
+        if (damage < 0)
+        {
+            damage = 0;
+        }
         mHitPoints -= damage;
         if (mHitPoints > 0)
         {
