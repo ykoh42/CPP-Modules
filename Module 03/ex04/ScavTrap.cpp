@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-std::string ScavTrap::mList[5] = {"Money", "Water", "Invisibility Cloak", "Time machine", "Portal"};
+std::string ScavTrap::mList[5] = {"navy seal", "programmer", "superhero", "astronaut", "saint"};
 
 ScavTrap::ScavTrap(void)
 {
@@ -10,7 +10,7 @@ ScavTrap::ScavTrap(void)
     mRangedAttackDamage = 15;
     mArmorDamageReduction = 3;
     std::cout << mName
-                << " 출격 준비 완료!" << std::endl;
+                << " : What do U need?" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name)
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(const std::string& name)
     mRangedAttackDamage = 15;
     mArmorDamageReduction = 3;
     std::cout << mName
-                << " 출격 준비 완료!" << std::endl;
+                << " : What do U need?" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
@@ -30,7 +30,7 @@ ScavTrap::ScavTrap(const ScavTrap& other)
     srand(time(NULL));
     *this = other;
     std::cout << mName
-            << " 출격 준비 완료!" << std::endl;
+                << " : What do U need?" << std::endl;
 }
 
 ScavTrap&   ScavTrap::operator=(const ScavTrap& other)
@@ -49,7 +49,7 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap& other)
 
 ScavTrap::~ScavTrap(void)
 {
-    std::cout << "자폭합니다!!" << std::endl;
+    std::cout << "Suicide bombing!! BOOM!!" << std::endl;
 }
 
 void        ScavTrap::rangedAttack(std::string const & target)
@@ -97,8 +97,8 @@ void        ScavTrap::challengeNewcomer(std::string const & target)
             }
             std::cout << "SC4B-TP "
                         << "<" << mName << ">"
-                        << " invented "
-                        << "\"" << mList[rand() % 5] << "\"" << " for "
+                        << " Challenges to become a "
+                        << "\"" << mList[rand() % 5] << "\"" << " with "
                         << "<" << target << ">"
                         << "! Cool!" << std::endl;
         }
