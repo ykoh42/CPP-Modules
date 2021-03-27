@@ -1,6 +1,7 @@
 #include "NinjaTrap.hpp"
 
 NinjaTrap::NinjaTrap(void)
+    : ClapTrap()
 {
     srand(time(NULL));
     mHitPoints = 60;
@@ -30,6 +31,7 @@ NinjaTrap::NinjaTrap(const std::string& name)
 }
 
 NinjaTrap::NinjaTrap(const NinjaTrap& other)
+    : ClapTrap(other)
 {
     srand(time(NULL));
     *this = other;

@@ -3,6 +3,7 @@
 std::string FragTrap::mList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
 
 FragTrap::FragTrap(void)
+    : ClapTrap()
 {
     srand(time(NULL));
     mMeleeAttackDamage = 30;
@@ -20,6 +21,7 @@ FragTrap::FragTrap(const std::string& name)
 }
 
 FragTrap::FragTrap(const FragTrap& other)
+    : ClapTrap(other)
 {
     srand(time(NULL));
     *this = other;

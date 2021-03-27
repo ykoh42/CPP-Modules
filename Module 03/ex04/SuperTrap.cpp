@@ -1,6 +1,9 @@
 #include "SuperTrap.hpp"
 
 SuperTrap::SuperTrap(void)
+    : ClapTrap()
+    , FragTrap()
+    , NinjaTrap()
 {
     srand(time(NULL));
     mHitPoints = FragTrap::mHitPoints;
@@ -32,6 +35,9 @@ SuperTrap::SuperTrap(const std::string& name)
 }
 
 SuperTrap::SuperTrap(const SuperTrap& other)
+    : ClapTrap(other)
+    , FragTrap(other)
+    , NinjaTrap(other)
 {
     srand(time(NULL));
     *this = other;

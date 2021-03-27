@@ -3,6 +3,7 @@
 std::string ScavTrap::mList[5] = {"navy seal", "programmer", "superhero", "astronaut", "saint"};
 
 ScavTrap::ScavTrap(void)
+    : ClapTrap()
 {
     srand(time(NULL));
     mEnergyPoints = 50;
@@ -26,6 +27,7 @@ ScavTrap::ScavTrap(const std::string& name)
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
+    : ClapTrap(other)
 {
     srand(time(NULL));
     *this = other;
