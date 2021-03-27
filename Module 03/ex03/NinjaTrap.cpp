@@ -1,7 +1,5 @@
 #include "NinjaTrap.hpp"
 
-std::string NinjaTrap::mList[5] = {"Money", "Water", "Invisibility Cloak", "Time machine", "Portal"};
-
 NinjaTrap::NinjaTrap(void)
 {
     srand(time(NULL));
@@ -62,7 +60,7 @@ void        NinjaTrap::rangedAttack(std::string const & target)
 {
     if (getHitPoints() > 0)
     {
-        std::cout << "N2NJA-TP "
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
                     << " attacks "
                     << "<" << target << ">"
@@ -76,7 +74,7 @@ void        NinjaTrap::meleeAttack(std::string const & target)
 {
     if (getHitPoints() > 0)
     {
-        std::cout << "N2NJA-TP "
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
                     << " attacks "
                     << "<" << target << ">"
@@ -88,44 +86,56 @@ void        NinjaTrap::meleeAttack(std::string const & target)
 
 void        NinjaTrap::ninjaShoebox(FragTrap &trap)
 {
-    std::cout << "N2NJA-TP "
+    if (getHitPoints() > 0)
+    {
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
-                    << " disguised to FragTrap! nobody can't notice! Even "
-                    << mName << " too!" << std::endl;
-    ClapTrap    *one = this;
-    ClapTrap    *other = &trap;
-    *one = *other;
+                    << " attacks "
+                    << "<" << trap.getName() << ">"
+                    << " with knuckle buster, causing "
+                    << "<" << mMeleeAttackDamage << ">"
+                    << " points of damage!" << std::endl;
+    }
 }
 
 void        NinjaTrap::ninjaShoebox(ScavTrap &trap)
 {
-    std::cout << "N2NJA-TP "
+    if (getHitPoints() > 0)
+    {
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
-                    << " disguised to FragTrap! nobody can't notice! Even "
-                    << mName << " too!" << std::endl;
-    ClapTrap    *one = this;
-    ClapTrap    *other = &trap;
-    *one = *other;
+                    << " attacks "
+                    << "<" << trap.getName() << ">"
+                    << " with Bomb, causing "
+                    << "<" << mMeleeAttackDamage << ">"
+                    << " points of damage!" << std::endl;
+    }
 }
 
 void        NinjaTrap::ninjaShoebox(ClapTrap &trap)
 {
-    std::cout << "N2NJA-TP "
+    if (getHitPoints() > 0)
+    {
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
-                    << " disguised to FragTrap! nobody can't notice! Even "
-                    << mName << " too!" << std::endl;
-    ClapTrap    *one = this;
-    ClapTrap    *other = &trap;
-    *one = *other;
+                    << " attacks "
+                    << "<" << trap.getName() << ">"
+                    << " with his teeth, causing "
+                    << "<" << mMeleeAttackDamage << ">"
+                    << " points of damage!" << std::endl;
+    }
 }
 
 void        NinjaTrap::ninjaShoebox(NinjaTrap &trap)
 {
-    std::cout << "N2NJA-TP "
+    if (getHitPoints() > 0)
+    {
+        std::cout << "N2NJ4-TP "
                     << "<" << mName << ">"
-                    << " disguised to FragTrap! nobody can't notice! Even "
-                    << mName << " too!" << std::endl;
-    ClapTrap    *one = this;
-    ClapTrap    *other = &trap;
-    *one = *other;
+                    << " attacks "
+                    << "<" << trap.getName() << ">"
+                    << " with shuriken, causing "
+                    << "<" << mRangedAttackDamage << ">"
+                    << " points of damage!" << std::endl;
+    }
 }
