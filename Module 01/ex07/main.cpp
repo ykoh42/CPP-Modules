@@ -3,13 +3,15 @@
 
 static void			replaceLine(std::string& line, std::string s1, std::string s2)
 {
+	std::size_t start = 0;
 	while (true)
 	{
-		std::size_t found = line.find(s1);
+		std::size_t found = line.find(s1, start);
 		
 		if (found != std::string::npos)
 		{
 			line.replace(found, s1.length(), s2);
+			start = found + s2.length();
 		}
 		else
 		{
