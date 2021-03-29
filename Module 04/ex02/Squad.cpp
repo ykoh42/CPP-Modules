@@ -37,7 +37,7 @@ Squad&          Squad::operator=(const Squad& other)
     mCount = 0;
     for (int i = 0; i < other.mCount; i++)
     {
-        push(other.getUnit(i));
+        push(other.getUnit(i)->clone());
     }
     return (*this);
 }

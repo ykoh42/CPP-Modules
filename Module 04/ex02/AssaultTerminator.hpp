@@ -8,7 +8,7 @@ class AssaultTerminator : public ISpaceMarine
 {
 public:
 	AssaultTerminator(void);
-	AssaultTerminator(AssaultTerminator const &other);
+	AssaultTerminator(const AssaultTerminator& other);
 	virtual ~AssaultTerminator(void);
 
 	AssaultTerminator&  operator=(const AssaultTerminator& other);
