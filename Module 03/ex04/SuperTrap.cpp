@@ -6,13 +6,13 @@ SuperTrap::SuperTrap(void)
     , NinjaTrap()
 {
     srand(time(NULL));
-    mHitPoints = FragTrap::mHitPoints;
-    mMaxHitPoints = FragTrap::mMaxHitPoints;
-    mEnergyPoints = NinjaTrap::mEnergyPoints;
-    mMaxEnergyPoints = NinjaTrap::mMaxEnergyPoints;
-    mMeleeAttackDamage = NinjaTrap::mMeleeAttackDamage;
-    mRangedAttackDamage = FragTrap::mRangedAttackDamage;
-    mArmorDamageReduction = FragTrap::mArmorDamageReduction;
+    mHitPoints = 100;
+    mMaxHitPoints = 100;
+    mEnergyPoints = 120;
+    mMaxEnergyPoints = 120;
+    mMeleeAttackDamage = 60;
+    mRangedAttackDamage = 20;
+    mArmorDamageReduction = 5;
     std::cout << mName
                 << " THE SUPERMAN Gen!" << std::endl;
 }
@@ -23,13 +23,13 @@ SuperTrap::SuperTrap(const std::string& name)
     , NinjaTrap(name)
 {
     srand(time(NULL));
-    mHitPoints = FragTrap::mHitPoints;
-    mMaxHitPoints = FragTrap::mMaxHitPoints;
-    mEnergyPoints = NinjaTrap::mEnergyPoints;
-    mMaxEnergyPoints = NinjaTrap::mMaxEnergyPoints;
-    mMeleeAttackDamage = NinjaTrap::mMeleeAttackDamage;
-    mRangedAttackDamage = FragTrap::mRangedAttackDamage;
-    mArmorDamageReduction = FragTrap::mArmorDamageReduction;
+    mHitPoints = 100;
+    mMaxHitPoints = 100;
+    mEnergyPoints = 120;
+    mMaxEnergyPoints = 120;
+    mMeleeAttackDamage = 60;
+    mRangedAttackDamage = 20;
+    mArmorDamageReduction = 5;
     std::cout << mName
                 << " THE SUPERMAN Gen!" << std::endl;
 }
