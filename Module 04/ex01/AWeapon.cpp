@@ -6,16 +6,16 @@ AWeapon::AWeapon(void)
 {
 }
 
-AWeapon::AWeapon(const AWeapon& other)
-{
-    *this = other;
-}
-
 AWeapon::AWeapon(const std::string& name, int apcost, int damage)
     : mName(name)
     , mAPcost(apcost)
     , mDamage(damage)
 {
+}
+
+AWeapon::AWeapon(const AWeapon& other)
+{
+    *this = other;
 }
 
 AWeapon::~AWeapon(void)

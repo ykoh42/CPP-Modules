@@ -16,9 +16,9 @@ PowerFist::~PowerFist(void)
 
 PowerFist&    PowerFist::operator=(const PowerFist& other)
 {
-    mName = other.mName;
-    mAPcost = other.mAPcost;
-    mDamage = other.mDamage;
+    setName(other.getName());
+    setAPCost(other.getAPCost());
+    setDamage(other.getDamage());
     return (*this);
 }
 
