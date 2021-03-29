@@ -5,20 +5,20 @@ Enemy::Enemy(void)
 {
 }
 
-Enemy::Enemy(const Enemy& other)
-{
-    *this = other;
-}
-
 Enemy::Enemy(int hp, const std::string& type)
     : mHP(hp)
     , mType(type)
 {
 }
 
+Enemy::Enemy(const Enemy& other)
+{
+    *this = other;
+}
+
 Enemy::~Enemy(void)
 {
-    std::cout << "enemy destructor called" << std::endl;
+    // std::cout << "Enemy destructor called." << std::endl;
 }
 
 Enemy&              Enemy::operator=(const Enemy& other)
@@ -36,6 +36,16 @@ const std::string&  Enemy::getType(void) const
 int                 Enemy::getHP(void) const
 {
     return (mHP);
+}
+
+void                Enemy::setType(const std::string& type)
+{
+    mType = type;
+}
+
+void                Enemy::setHP(const int hp)
+{
+    mHP = hp;
 }
 
 void                Enemy::takeDamage(int damage)

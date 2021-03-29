@@ -6,16 +6,16 @@ Character::Character(void)
 {
 }
 
-Character::Character(const Character& other)
-{
-    *this = other;
-}
-
 Character::Character(const std::string& name)
     : mName(name)
     , mAP(40)
     , mWeapon(NULL)
 {
+}
+
+Character::Character(const Character& other)
+{
+    *this = other;
 }
 
 Character::~Character(void)

@@ -7,9 +7,8 @@
 class Character
 {
 public:
-	Character(void);
-	Character(const Character& other);
     Character(const std::string& name);
+	Character(const Character& other);
 	~Character(void);
 
 	Character&          operator=(const Character& other);
@@ -23,6 +22,8 @@ public:
     void                equip(AWeapon* weapon);
 
 private:
+	Character(void);
+
 	std::string         mName;
     int                 mAP;
 	AWeapon*            mWeapon;

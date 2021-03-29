@@ -7,6 +7,7 @@ SuperMutant::SuperMutant(void)
 }
 
 SuperMutant::SuperMutant(const SuperMutant& other)
+    : Enemy(other)
 {
     *this = other;
     std::cout << "Gaaah. Me want smash heads!" << std::endl;
@@ -19,8 +20,8 @@ SuperMutant::~SuperMutant(void)
 
 SuperMutant&    SuperMutant::operator=(const SuperMutant& other)
 {
-    mHP = other.mHP;
-    mType = other.mType;
+    setHP(other.getHP());
+    setType(other.getType());
     return (*this);
 }
 

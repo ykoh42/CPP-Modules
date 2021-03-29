@@ -6,6 +6,7 @@ PowerFist::PowerFist(void)
 }
 
 PowerFist::PowerFist(const PowerFist& other)
+    : AWeapon(other)
 {
     *this = other;
 }

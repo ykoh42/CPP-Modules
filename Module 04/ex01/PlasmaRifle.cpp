@@ -6,6 +6,7 @@ PlasmaRifle::PlasmaRifle(void)
 }
 
 PlasmaRifle::PlasmaRifle(const PlasmaRifle& other)
+    : AWeapon(other)
 {
     *this = other;
 }

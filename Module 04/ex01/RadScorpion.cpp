@@ -7,6 +7,7 @@ RadScorpion::RadScorpion(void)
 }
 
 RadScorpion::RadScorpion(const RadScorpion& other)
+    : Enemy(other)
 {
     *this = other;
     std::cout << "* click click click *" << std::endl;
@@ -19,8 +20,8 @@ RadScorpion::~RadScorpion(void)
 
 RadScorpion&    RadScorpion::operator=(const RadScorpion& other)
 {
-    mHP = other.mHP;
-    mType = other.mType;
+    setHP(other.getHP());
+    setType(other.getType());
     return (*this);
 }
 
