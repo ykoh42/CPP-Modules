@@ -44,3 +44,18 @@ int                 AWeapon::getDamage(void) const
 {
     return (mDamage);
 }
+
+void                AWeapon::setName(const std::string& name)
+{
+    mName = name;
+}
+
+void                AWeapon::setAPCost(const int apcost)
+{
+    mAPcost = apcost;
+}
+
+void                AWeapon::setDamage(const int damage)
+{
+    mDamage = damage;
+}

@@ -15,9 +15,9 @@ public:
     const std::string&  getName(void) const;
     int                 getAPCost(void) const;
     int                 getDamage(void) const;
-    void                setName(const std::string& name) const;
-    void                setAPCost(const int apcost) const;
-    void                setDamage(const int damage) const;
+    void                setName(const std::string& name);
+    void                setAPCost(const int apcost);
+    void                setDamage(const int damage);
     virtual void        attack(void) const = 0;
 
 private:
