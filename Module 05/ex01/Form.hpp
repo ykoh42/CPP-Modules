@@ -10,6 +10,7 @@ class Form;
 class Form
 {
 public:
+	Form(void);
 	Form(const std::string& name, const int signGrade, const int executeGrade);
 	Form(const Form& other);
 	virtual ~Form(void);
@@ -22,15 +23,6 @@ public:
 	int                 GetExecuteGrade(void) const;
 
     void                beSigned(const Bureaucrat& bureaucrat);
-
-private:
-	Form(void);
-
-	const std::string	mName;
-	bool                mSigned;
-	const int           mSignGrade;
-	const int           mExecuteGrade;
-
 
 	class GradeTooHighException : public std::exception
     {
@@ -51,6 +43,13 @@ private:
     {
 		const char* what(void) const throw();
 	};
+
+private:
+
+	const std::string	mName;
+	bool                mSigned;
+	const int           mSignGrade;
+	const int           mExecuteGrade;
 };
 
 

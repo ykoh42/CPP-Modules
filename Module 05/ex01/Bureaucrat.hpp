@@ -21,12 +21,6 @@ public:
 	void                DecrementGrade(void);
 	void				signForm(Form& form) const;
 
-private:
-	Bureaucrat(void);
-
-	const std::string   mName;
-	int                 mGrade;
-
 	class GradeTooHighException : public std::exception
     {
 		const char* what(void) const throw();
@@ -41,6 +35,12 @@ private:
     {
 		const char* what(void) const throw();
 	};
+
+private:
+	Bureaucrat(void);
+
+	const std::string   mName;
+	int                 mGrade;
 };
 
 std::ostream&       operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

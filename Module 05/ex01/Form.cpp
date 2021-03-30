@@ -1,7 +1,8 @@
 #include "Form.hpp"
 
 Form::Form(void)
-    : mSigned(0)
+    : mName("undefined")
+    , mSigned(0)
     , mSignGrade(1)
     , mExecuteGrade(1)
 {
@@ -78,7 +79,6 @@ void                Form::beSigned(const Bureaucrat& bureaucrat)
     {
         throw Form::GradeTooLowException();
     }
-    
 }
 
 const char*         Form::GradeTooHighException::what(void) const throw()
