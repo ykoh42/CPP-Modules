@@ -19,7 +19,7 @@ Squad::~Squad(void)
         {
             delete mUnits[i];
         }
-        delete[] mUnits; // or delete
+        delete[] mUnits;
     }
 }
 

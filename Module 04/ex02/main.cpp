@@ -18,6 +18,6 @@ int main(void)
         cur->meleeAttack();
     }
     delete vlc;
-    // while(1);
+
     return (0);
 }
