@@ -15,7 +15,7 @@ PowerFist::~PowerFist(void)
 {
 }
 
-PowerFist&    PowerFist::operator=(const PowerFist& other)
+PowerFist&      PowerFist::operator=(const PowerFist& other)
 {
     setName(other.getName());
     setAPCost(other.getAPCost());

@@ -11,6 +11,7 @@ public:
 	virtual ~Enemy(void);
 
 	Enemy&              operator=(const Enemy& other);
+    
     const std::string&  getType(void) const;
     int                 getHP(void) const;
     void                setType(const std::string& type);
