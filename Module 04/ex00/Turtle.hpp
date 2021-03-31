@@ -7,8 +7,8 @@ class Turtle : public Victim
 {
 public:
 	Turtle(void);
-	Turtle(const Turtle& other);
 	Turtle(const std::string& name);
+	Turtle(const Turtle& other);
 	virtual ~Turtle();
 
 	Turtle&   operator=(const Turtle& other);

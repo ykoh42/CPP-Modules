@@ -6,8 +6,8 @@
 class Sorcerer
 {
 public:
-	Sorcerer(const Sorcerer& other);
 	Sorcerer(const std::string& name, const std::string& title);
+	Sorcerer(const Sorcerer& other);
 	~Sorcerer(void);
 
 	Sorcerer&           operator=(const Sorcerer& other);

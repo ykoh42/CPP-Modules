@@ -1,6 +1,13 @@
 #include "Victim.hpp"
 
 Victim::Victim(void)
+    : mName("undefined")
+{
+    std::cout << "Some random victim called " << mName <<" just appeared!" << std::endl;
+}
+
+Victim::Victim(const std::string& name)
+    : mName(name)
 {
     std::cout << "Some random victim called " << mName <<" just appeared!" << std::endl;
 }
@@ -8,12 +15,6 @@ Victim::Victim(void)
 Victim::Victim(const Victim& other)
 {
     *this = other;
-    std::cout << "Some random victim called " << mName <<" just appeared!" << std::endl;
-}
-
-Victim::Victim(const std::string& name)
-    : mName(name)
-{
     std::cout << "Some random victim called " << mName <<" just appeared!" << std::endl;
 }
 
@@ -31,6 +32,11 @@ Victim&             Victim::operator=(const Victim& other)
 const std::string&  Victim::GetName(void) const
 {
     return (mName);
+}
+
+void				Victim::SetName(const std::string& name)
+{
+    mName = name;
 }
 
 void                Victim::getPolymorphed(void) const

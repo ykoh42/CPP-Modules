@@ -7,8 +7,8 @@ class Peon : public Victim
 {
 public:
 	Peon(void);
-	Peon(const Peon& other);
 	Peon(const std::string& name);
+	Peon(const Peon& other);
 	virtual ~Peon();
 
 	Peon&   operator=(const Peon& other);

@@ -5,16 +5,16 @@ Sorcerer::Sorcerer(void)
     std::cout << mName <<", " << mTitle << ", is born!" << std::endl;
 }
 
-Sorcerer::Sorcerer(const Sorcerer& other)
-{
-    *this = other;
-    std::cout << mName <<", " << mTitle << ", is born!" << std::endl;
-}
-
 Sorcerer::Sorcerer(const std::string& name, const std::string& title)
     : mName(name)
     , mTitle(title)
 {
+    std::cout << mName <<", " << mTitle << ", is born!" << std::endl;
+}
+
+Sorcerer::Sorcerer(const Sorcerer& other)
+{
+    *this = other;
     std::cout << mName <<", " << mTitle << ", is born!" << std::endl;
 }
 
