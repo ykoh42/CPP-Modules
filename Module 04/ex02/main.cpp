@@ -17,7 +17,15 @@ int main(void)
         cur->rangedAttack();
         cur->meleeAttack();
     }
+
+	// std::cout << std::string(50, '-') << std::endl;
+	// std::cout << vlc->getCount() << std::endl;
+	// vlc->push(bob);
+	// std::cout << vlc->getCount() << std::endl;
+	// std::cout << std::string(50, '-') << std::endl;
+
     delete vlc;
 
     return (0);
 }
+
