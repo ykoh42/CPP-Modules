@@ -1,11 +1,12 @@
 #include "Character.hpp"
 
 Character::Character(void)
-    : mCount(0)
+	: mName("undefined")
+    , mCount(0)
 {
     for (int i = 0; i < 4; i++)
     {
-        mInventory[i] = 0;
+        mInventory[i] = NULL;
     }
 }
 
@@ -15,7 +16,7 @@ Character::Character(const std::string& name)
 {
     for (int i = 0; i < 4; i++)
     {
-        mInventory[i] = 0;
+        mInventory[i] = NULL;
     }
 }
 
@@ -29,6 +30,7 @@ Character::~Character(void)
     for (int i = 0; i < mCount; i++)
     {
         delete mInventory[i];
+		mInventory[i] = NULL;
     }
 }
 
@@ -39,13 +41,14 @@ Character&          Character::operator=(const Character& other)
     for (int i = 0; i < mCount; i++)
     {
         delete mInventory[i];
+		mInventory[i] = NULL;
     }
     mCount = 0;
     for (int i = 0; i < other.mCount; i++)
     {
-        // unequip(i);
         equip(other.mInventory[i]->clone());
     }
+	return (*this);
 }
 
 const std::string&  Character::getName(void) const
@@ -75,8 +78,7 @@ void                Character::unequip(int idx)
     {
         if (idx == 3)
         {
-            mInventory[3] = 0;
-            mCount--;
+            mInventory[idx] = NULL;
         }
         else
         {
@@ -84,9 +86,9 @@ void                Character::unequip(int idx)
             {
                 mInventory[i] = mInventory[i + 1];
                 mInventory[i + 1] = NULL;
-                mCount--;
             }
         }
+		mCount--;
     }
 }
 
