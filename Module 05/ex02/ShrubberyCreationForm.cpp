@@ -1,6 +1,6 @@
 #include "ShrubberyCreationForm.hpp"
 
-const std::string   ShrubberyCreationForm::mAsciiTree =\
+const std::string   ShrubberyCreationForm::mAsciiTree =
 "\
       /---\\\n\
      /__ __\\\n\
