@@ -104,24 +104,28 @@ const char*         Form::SignedException::what(void) const throw()
 std::ostream&       operator<<(std::ostream& os, const Form& form)
 {
     os << std::endl;
-    os << "|-----------------------------------------------------|" << std::endl;
-    os << "|                      " << form.GetName() << "                       |" << std::endl;
-    os << "|-----------------------------------------------------|" << std::endl;
-    os << "| Sign Grade : ";
-    os << std::setw(3) << form.GetSignGrade();
-    os << " | Execute Grade : ";
-    os << std::setw(3) << form.GetExecuteGrade();
-    os << " | Signed : ";
+    os << "|" << std::string(53, '-') << "|" << std::endl;
+    os << "|";
+    os << " ";
+    os << std::setw(51) << std::left << form.GetName();
+    os << " ";
+    os << "|" << std::endl;
+    os << "|" << std::string(53, '-') << "|" << std::endl;
+    os << "| ";
+    os << "Sign Grade : " << std::setw(3) << std::right << form.GetSignGrade();
+    os << " | ";
+    os << "Execute Grade : " << std::setw(3) << form.GetExecuteGrade();
+    os << " | ";
+    os << "Signed : ";
     if (form.GetSigned() == true)
     {
-        os << "O |" << std::endl;
+        os << "O";
     }
     else
     {
-        os << "X |" << std::endl;
+        os << "X";
     }
-    os << "|-----------------------------------------------------|" << std::endl;
-    os << "|                                                     |" << std::endl;
-    os << "|-----------------------------------------------------|" << std::endl;
+    os << " |" << std::endl;
+    os << "|" << std::string(53, '-') << "|" << std::endl;
 	return (os);
 }
