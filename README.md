@@ -114,10 +114,9 @@
 ## Module 04
 | Excercise | What I learned |
 |-|-|
-| ex00 | virtual member function |
+| ex00 | abstract classes, virtual member function |
 | ex01 | pure virtual functions, virtual destructor, overriding |
-| ex02 | abstract classes |
-| ex03 |  |
+| ex02, ex03 | interfaces, deep copy |
 
 ### Subtype polymorphism
  - https://www.cplusplus.com/doc/tutorial/polymorphism/
@@ -126,13 +125,28 @@
 
 ### interfaces
 
+
 ## Module 05
-Repetition and Exceptions
+| Excercise | What I learned |
+|-|-|
+| ex00, ex01, ex02, ex03 | Nested classes, Exceptions |
+
+### Nested classes
+
+### Exceptions
+
 ## Module 06
-C++ Casts
+
+
+### Casts
+
+
 ## Module 07
-c++ Templates
+
+### Templates
+
 ## Module 08
+
 Templated containers, iterators, algorithms
 
 
