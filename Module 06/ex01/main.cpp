@@ -30,9 +30,9 @@ void*           serialize(void)
 Data*           deserialize(void* raw)
 {
 	Data*   data = new Data;
-    data->s1 = *reinterpret_cast<std::string *>(raw);
-    data->n = *reinterpret_cast<int *>(reinterpret_cast<char *>(raw) + sizeof(std::string));
-    data->s2 = *reinterpret_cast<std::string *>(reinterpret_cast<char *>(raw) + sizeof(std::string) + sizeof(int));
+    data->s1 = *reinterpret_cast<std::string*>(raw);
+    data->n = *reinterpret_cast<int*>(reinterpret_cast<char*>(raw) + sizeof(std::string));
+    data->s2 = *reinterpret_cast<std::string*>(reinterpret_cast<char*>(raw) + sizeof(std::string) + sizeof(int));
 	return (data);
 }
 
@@ -50,7 +50,7 @@ int             main(void)
 		std::cout << "\t n: " << data->n << '\n';
 		std::cout << "\ts2: " << data->s2 << std::endl;
 
-		delete reinterpret_cast<char *>(raw);
+		delete reinterpret_cast<char*>(raw);
 		delete data;
 	}
 	return (0);
