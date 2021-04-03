@@ -20,7 +20,6 @@ T&      min(T& a, T& b)
     {
 	    return (b);
     }
-    
 }
 
 template<typename T>
