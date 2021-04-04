@@ -1,9 +1,6 @@
 #ifndef SPAN_HPP
 # define SPAN_HPP
 
-// # include <set>
-// # include <cmath>
-// # include <algorithm>
 # include <list>
 
 class Span
@@ -16,8 +13,7 @@ public:
 	Span&           operator=(const Span& other);
 
 	void            addNumber(int value);
-	// template<typename InputIterator>
-	// void addNumber(InputIterator begin, InputIterator end);
+    void            addNumber(std::list<int>::iterator first, std::list<int>::iterator last);
 
 	unsigned int    shortestSpan(void) const;
 	unsigned int    longestSpan(void) const;
@@ -31,9 +27,10 @@ private:
 	class MaxSizeException : public std::exception {
 		virtual const char* what(void) const throw();
 	};
-	// class NotEnoughNumbersException : public std::exception {
-	// 	virtual const char* what() const throw();
-	// };
+
+	class MinSizeException : public std::exception {
+		virtual const char* what(void) const throw();
+	};
 };
 
 #endif
