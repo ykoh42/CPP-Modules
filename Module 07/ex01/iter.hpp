@@ -29,3 +29,10 @@ void    plus65(T& value)
 {
 	value += 65;
 }
+
+// template<typename T>
+// void    plus65(const T& value)
+// {
+//     T&	ref = const_cast<T&>(value);
+//     ref += 65;
+// }
