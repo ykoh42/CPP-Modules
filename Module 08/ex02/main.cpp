@@ -4,6 +4,9 @@
 
 int main(void)
 {
+    std::cout << std::string(60, '-') << std::endl;
+    std::cout << "stack test" << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
     {
         MutantStack<int>    mstack;
 
@@ -35,6 +38,8 @@ int main(void)
         std::stack<int> s(mstack);
     }
     std::cout << std::string(60, '-') << std::endl;
+    std::cout << "list test" << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
     {
         std::list<int>    mstack;
 
@@ -64,6 +69,39 @@ int main(void)
             ++it;
         }
         std::list<int> s(mstack);
+    }
+    std::cout << std::string(60, '-') << std::endl;
+    std::cout << "reverse iterator test" << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
+    {
+        MutantStack<int>    mstack;
+
+        mstack.push(5);
+        mstack.push(17);
+
+        std::cout << mstack.top() << std::endl;
+
+        mstack.pop();
+
+        std::cout << mstack.size() << std::endl;
+
+        mstack.push(3);
+        mstack.push(5);
+        mstack.push(737);
+        //[...]
+        mstack.push(0);
+
+        MutantStack<int>::reverse_iterator rit = mstack.rbegin();
+        MutantStack<int>::reverse_iterator rite = mstack.rend();
+
+        ++rit;
+        --rit;
+        while (rit != rite)
+        {
+            std::cout << *rit << std::endl;
+            ++rit;
+        }
+        std::stack<int> s(mstack);
     }
     return (0);
 }
