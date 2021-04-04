@@ -25,7 +25,7 @@ void    display(const T& value)
 }
 
 template<typename T>
-void    plusOne(T& value)
+void    plus65(T& value)
 {
 	value += 65;
 }
