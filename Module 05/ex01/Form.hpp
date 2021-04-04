@@ -26,22 +26,22 @@ public:
 
 	class GradeTooHighException : public std::exception
     {
-		const char* what(void) const throw();
+		virtual const char* what(void) const throw();
 	};
 
-	class GradeTooLowException: public std::exception
+	class GradeTooLowException : public std::exception
     {
-		const char* what(void) const throw();
+		virtual const char* what(void) const throw();
 	};
 
-	class InvalidGradeException: public std::exception
+	class InvalidGradeException : public std::exception
     {
-		const char* what(void) const throw();
+		virtual const char* what(void) const throw();
 	};
 
-	class SignedException: public std::exception
+	class SignedException : public std::exception
     {
-		const char* what(void) const throw();
+		virtual const char* what(void) const throw();
 	};
 
 private:

@@ -23,7 +23,7 @@ private:
 	unsigned int	mSize;
 	T*				mElems;
 
-	class OutOfBoundsException: public std::exception {
+	class OutOfBoundsException : public std::exception {
 		virtual const char* what(void) const throw();
 	};
 };
