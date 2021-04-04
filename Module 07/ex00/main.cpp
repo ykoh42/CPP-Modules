@@ -27,5 +27,8 @@ int main(void)
 	std::cout << "min(c, d) = " << ::min(c, d) << std::endl;
 	std::cout << "max(c, d) = " << ::max(c, d) << std::endl;
     std::cout << std::string(60, '-') << std::endl;
+    std::cout << "min(2, 3) = " << ::min(2, 3) << std::endl;
+    std::cout << "max(\"chaine1\", \"chaine2\") = " << ::max("chaine1", "chaine2") << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
 	return (0);
 }
