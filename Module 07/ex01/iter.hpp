@@ -23,3 +23,9 @@ void    display(const T& value)
 {
 	std::cout << value << " ";
 }
+
+template<typename T>
+void    plusOne(T& value)
+{
+	value += 65;
+}

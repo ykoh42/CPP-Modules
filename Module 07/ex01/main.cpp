@@ -34,5 +34,17 @@ int main(void)
 	iter(stringR, 0, &display);
     std::cout << std::endl;
     std::cout << std::string(60, '-') << std::endl;
+	iter(intR, 3, &display<int>);
+    std::cout << std::endl;
+	iter(intR, 3, &plusOne<int>);
+	iter(intR, 3, &display<int>);
+    std::cout << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
+	iter(stringR, 3, &display<std::string>);
+    std::cout << std::endl;
+	iter(stringR, 3, &plusOne<std::string>);
+	iter(stringR, 3, &display<std::string>);
+    std::cout << std::endl;
+    std::cout << std::string(60, '-') << std::endl;
 	return (0);
 }
