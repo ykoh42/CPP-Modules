@@ -24,7 +24,7 @@ void*           serialize(void)
     *reinterpret_cast<std::string*>(ret) = s1;
     *reinterpret_cast<int*>(ret + sizeof(std::string)) = n;
     *reinterpret_cast<std::string*>(ret + sizeof(std::string) + sizeof(int)) = s2;
-	return (ret);
+	return (reinterpret_cast<void*>(ret));
 }
 
 Data*           deserialize(void* raw)
