@@ -19,62 +19,65 @@ Span::~Span(void)
 {
 }
 
-Span&           Span::operator=(const Span& other)
+Span&                   Span::operator=(const Span& other)
 {
     mList = other.mList;
     return (*this);
 }
 
-void            Span::addNumber(int value)
+const std::list<int>&   Span::GetList(void) const
 {
-    if (mList.size() >= mMax)
+    return (mList);
+}
+
+void                    Span::addNumber(int value)
+{
+    if (mMax <= mList.size())
     {
         throw MaxSizeException();
     }
     else
     {
         mList.push_back(value);
-        mList.sort();
     }
 }
 
-void            Span::addNumber(std::list<int>::iterator first, std::list<int>::iterator last)
-{
-    if (mList.size() >= mMax)
-    {
-        throw MaxSizeException();
-    }
-    else
-    {
-        mList.insert(mList.end(), first, last);
-        mList.sort();
-    }
-}
-
-unsigned int    Span::shortestSpan(void) const
+unsigned int            Span::shortestSpan(void) const
 {
     if (mList.size() < 2)
     {
         throw MinSizeException();
     }
-    return (*(++mList.begin()) - *mList.begin());
+    std::list<int>  tmp1(mList);
+
+    tmp1.unique();
+    if (mList.size() != tmp1.size())
+    {
+        return (0);
+    }
+    std::list<int>  tmp2(mList);
+    tmp2.sort();
+    return (*(++tmp2.begin()) - *tmp2.begin());
 }
 
-unsigned int    Span::longestSpan(void) const
+unsigned int            Span::longestSpan(void) const
 {
     if (mList.size() < 2)
     {
         throw MinSizeException();
     }
-    return (*(--mList.end()) - *mList.begin());
+    std::list<int>  tmp(mList);
+
+    tmp.sort();
+    return (*(--tmp.end()) - *tmp.begin());
 }
 
-const char*     Span::MaxSizeException::what(void) const throw()
+const char*             Span::MaxSizeException::what(void) const throw()
 {
     return ("Max size exception");
 }
 
-const char*     Span::MinSizeException::what(void) const throw()
+const char*             Span::MinSizeException::what(void) const throw()
 {
     return ("Min size exception");
 }

@@ -10,19 +10,32 @@ public:
 	Span(const Span& other);
 	~Span(void);
 
-	Span&           operator=(const Span& other);
+	Span&           		operator=(const Span& other);
 
-	void            addNumber(int value);
-    void            addNumber(std::list<int>::iterator first, std::list<int>::iterator last);
+	const std::list<int>&	GetList(void) const;
 
-	unsigned int    shortestSpan(void) const;
-	unsigned int    longestSpan(void) const;
+	void            		addNumber(int value);
+	template<typename InputIterator>
+    void            		addNumber(InputIterator first, InputIterator last)
+	{
+		if (mMax < mList.size() + (last - first))
+		{
+			throw MaxSizeException();
+		}
+		else
+		{
+			mList.insert(mList.end(), first, last);
+		}
+	}
+
+	unsigned int    		shortestSpan(void) const;
+	unsigned int    		longestSpan(void) const;
 
 private:
 	Span(void);
 
-    unsigned int    mMax;
-	std::list<int>  mList;
+    unsigned int			mMax;
+	std::list<int>			mList;
 
 	class MaxSizeException : public std::exception {
 		virtual const char* what(void) const throw();
