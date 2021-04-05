@@ -10,7 +10,17 @@ ConvertDouble::ConvertDouble(const std::string& str)
 {
     if (GetType() == CHAR)
     {
-        mValue = static_cast<double>(std::stoi(str));
+        try
+        {
+            mValue = static_cast<char>(std::stoi(str));
+        }
+        catch(const std::exception& e)
+        {
+            if (str.length() == 1)
+            {
+                mValue = str.at(0);
+            }
+        }
     }
     else if (GetType() == INT)
     {
