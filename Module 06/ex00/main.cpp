@@ -1,17 +1,21 @@
-#include "Convert.hpp"
+#include "ConvertChar.hpp"
+#include "ConvertInt.hpp"
+#include "ConvertFloat.hpp"
+#include "ConvertDouble.hpp"
 
 int	main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-		Convert		value(argv[1]);
-		
+        std::string str(argv[1]);
+
 		try
 		{
 			std::cout << "char: ";
-			std::cout << value.GetChar() << std::endl;
+            char c = ConvertChar(str).GetValue();
+			std::cout << "'" << c << "'" << std::endl;
 		}
-		catch(const Convert::NonDisplayableException& e)
+		catch(const ConvertChar::NonDisplayableException& e)
 		{
 			std::cout << "Non displayable" << '\n';
 		}
@@ -23,7 +27,7 @@ int	main(int argc, char *argv[])
 		try
 		{
 			std::cout << "int: ";
-			std::cout << value.GetInt() << std::endl;
+			std::cout << ConvertInt(str).GetValue() << std::endl;
 		}
 		catch(const std::exception& e)
 		{
@@ -33,7 +37,27 @@ int	main(int argc, char *argv[])
 		try
 		{
 			std::cout << "float: ";
-			std::cout << value.GetFloat() << std::endl;
+
+            std::stringstream   ss;
+            ss << ConvertFloat(str).GetValue();
+            if (ss.str().find('.') == std::string::npos)
+            {
+                std::string		pseudoLiterals[4] = {"inf", "-inf", "+inf", "nan"};
+                int i = 0;
+                for (; i < 4; i++)
+                {
+                    if (ss.str().compare(pseudoLiterals[i]) == 0)
+                    {
+                        break ;
+                    }
+                }
+                if (i == 4)
+                {
+                    ss << ".0";
+                }
+            }
+            ss << "f";
+            std::cout << ss.str() << std::endl;
 		}
 		catch(const std::exception& e)
 		{
@@ -43,7 +67,26 @@ int	main(int argc, char *argv[])
 		try
 		{
 			std::cout << "double: ";
-			std::cout << value.GetDouble() << std::endl;
+
+            std::stringstream   ss;
+            ss << ConvertDouble(str).GetValue();
+            if (ss.str().find('.') == std::string::npos)
+            {
+                std::string		pseudoLiterals[4] = {"inf", "-inf", "+inf", "nan"};
+                int i = 0;
+                for (; i < 4; i++)
+                {
+                    if (ss.str().compare(pseudoLiterals[i]) == 0)
+                    {
+                        break ;
+                    }
+                }
+                if (i == 4)
+                {
+                    ss << ".0";
+                }
+            }
+            std::cout << ss.str() << std::endl;
 		}
 		catch(const std::exception& e)
 		{
@@ -55,5 +98,6 @@ int	main(int argc, char *argv[])
 		std::cout << "Invalid arguments" << std::endl;
 		std::cout << "Usage : " << argv[0] << " LITERAL"<< std::endl;
 	}
+	// std::cout << std::fixed << std::numeric_limits<int>::min() << std::endl;
 	return (0);
 }

@@ -1,5 +1,9 @@
 SRCS		=	main.cpp\
-			Convert.cpp
+			Convert.cpp\
+			ConvertChar.cpp\
+			ConvertInt.cpp\
+			ConvertFloat.cpp\
+			ConvertDouble.cpp
 			
 OBJS		=	$(SRCS:.cpp=.o)
 NAME		=	convert
