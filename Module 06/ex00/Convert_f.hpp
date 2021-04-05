@@ -19,21 +19,26 @@ public:
 	const float&		GetFloat(void) const;
 	const double&		GetDouble(void) const;
 
+	class NonDisplayableException : public std::exception
+	{
+		virtual const char* what(void) const throw();
+	};
+	
 private:
 	Convert(void);
 
 	void				SetType(const std::string& value);
-	void				SetChar(const std::string& value);
-	void				SetInt(const std::string& value);
+	void				SetChar(const char& value);
+	void				SetInt(const int& value);
 	void				SetFloat(const float& value);
-	void				SetDouble(const std::string& value);
+	void				SetDouble(const double& value);
 
 	int					mType;
 	char				mChar;
 	int					mInt;
 	float				mFloat;
 	double				mDouble;
-	
+
 };
 
 std::ostream&           operator<<(std::ostream& os, const Convert& value);

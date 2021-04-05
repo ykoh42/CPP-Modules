@@ -30,6 +30,18 @@ Convert::Convert(const std::string& value)
 	{
 		SetFloat(stof(value));
 	}
+	else if (mType == DOUBLE)
+	{
+		SetDouble(stod(value));
+	}
+	else if (mType == INT)
+	{
+		SetInt(stoi(value));
+	}
+	else if (mType == CHAR)
+	{
+		SetChar(int(value.at(0)));
+	}
 }
 
 Convert::Convert(const Convert& other)
@@ -156,14 +168,14 @@ void				Convert::SetType(const std::string& value)
 	mType = IMPOSSIBLE;
 }
 
-void				Convert::SetChar(const std::string& value)
+void				Convert::SetChar(const char& value)
 {
-	mChar = std::stoi(value);
+	mChar = value;
 }
 
-void				Convert::SetInt(const std::string& value)
+void				Convert::SetInt(const int& value)
 {
-	mInt = std::stoi(value);
+	mInt = value;
 }
 
 void				Convert::SetFloat(const float& value)
@@ -171,9 +183,9 @@ void				Convert::SetFloat(const float& value)
 	mFloat = value;
 }
 
-void				Convert::SetDouble(const std::string& value)
+void				Convert::SetDouble(const double& value)
 {
-	mDouble = std::stod(value);
+	mDouble = value;;
 
 }
 
@@ -208,22 +220,82 @@ std::ostream&		operator<<(std::ostream& os, const Convert& value)
 
 	if (value.GetType() == CHAR)
 	{
-		// os << "char: ";
-		// os << "int: ";
-		// os << "float: ";
-		// os << "double: ";
+		int	tmp = value.GetChar();
+
+		if (isprint(tmp))
+		{
+			os << "char: " << "'" << static_cast<char>(tmp) << "'" << std::endl;
+		}
+		else
+		{
+			os << "char: " << "Non displayable" << std::endl;
+		}
+		os << "int: " << static_cast<int>(value.GetChar()) << std::endl;
+		os << "float: ";
+		ss << static_cast<float>(value.GetChar());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		ss << "f";
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
+		os << "double: ";
+		ss << static_cast<double>(value.GetChar());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
 	}
 	else if (value.GetType() == INT)
 	{
-		// os << "char: ";
-		// os << "int: ";
-		// os << "float: ";
-		// os << "double: ";
-		
+		int	tmp = value.GetChar();
+
+		if (isprint(tmp))
+		{
+			os << "char: " << "'" << static_cast<char>(tmp) << "'" << std::endl;
+		}
+		else
+		{
+			os << "char: " << "Non displayable" << std::endl;
+		}
+		os << "int: " << static_cast<int>(value.GetInt()) << std::endl;
+		os << "float: ";
+		ss << static_cast<float>(value.GetInt());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		ss << "f";
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
+		os << "double: ";
+		ss << static_cast<double>(value.GetInt());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
 	}
 	else if (value.GetType() == FLOAT)
 	{
-		os << "char: " << "'" << static_cast<char>(value.GetFloat()) << "'" << std::endl;
+		int	tmp = value.GetChar();
+
+		if (isprint(tmp))
+		{
+			os << "char: " << "'" << static_cast<char>(tmp) << "'" << std::endl;
+		}
+		else
+		{
+			os << "char: " << "Non displayable" << std::endl;
+		}
 		os << "int: " << static_cast<int>(value.GetFloat()) << std::endl;
 		os << "float: ";
 		ss << static_cast<float>(value.GetFloat());
@@ -247,11 +319,50 @@ std::ostream&		operator<<(std::ostream& os, const Convert& value)
 	}
 	else if (value.GetType() == DOUBLE)
 	{
-		// os << "char: ";
-		// os << "int: ";
-		// os << "float: ";
-		// os << "double: ";
+		int	tmp = value.GetChar();
+
+		if (isprint(tmp))
+		{
+			os << "char: " << "'" << static_cast<char>(tmp) << "'" << std::endl;
+		}
+		else
+		{
+			os << "char: " << "Non displayable" << std::endl;
+		}
+		os << "int: " << static_cast<int>(value.GetDouble()) << std::endl;
+		os << "float: ";
+		ss << static_cast<float>(value.GetDouble());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		ss << "f";
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
+		os << "double: ";
+		ss << static_cast<double>(value.GetDouble());
+		if (ss.str().find('.') == std::string::npos)
+		{
+			ss << ".0";
+		}
+		os << ss.str() << std::endl;
+		ss.str(std::string());
+		ss.clear();
 	}
 
 	return (os);
+}
+
+
+
+// +3 +0 ... -3
+
+
+
+
+
+const char* Convert::NonDisplayableException::what(void) const throw()
+{
+	return ("Non displayable");
 }

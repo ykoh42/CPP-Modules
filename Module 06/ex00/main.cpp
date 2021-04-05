@@ -5,7 +5,50 @@ int	main(int argc, char *argv[])
 	if (argc == 2)
 	{
 		Convert		value(argv[1]);
-		std::cout << value;
+		
+		try
+		{
+			std::cout << "char: ";
+			std::cout << value.GetChar() << std::endl;
+		}
+		catch(const Convert::NonDisplayableException& e)
+		{
+			std::cout << "Non displayable" << '\n';
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "impossible" << '\n';
+		}
+
+		try
+		{
+			std::cout << "int: ";
+			std::cout << value.GetInt() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "impossible" << '\n';
+		}
+
+		try
+		{
+			std::cout << "float: ";
+			std::cout << value.GetFloat() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "impossible" << '\n';
+		}
+
+		try
+		{
+			std::cout << "double: ";
+			std::cout << value.GetDouble() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << "impossible" << '\n';
+		}
 	}
 	else
 	{
@@ -14,4 +57,3 @@ int	main(int argc, char *argv[])
 	}
 	return (0);
 }
-
