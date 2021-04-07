@@ -27,6 +27,10 @@ MateriaSource::~MateriaSource(void)
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource& other)
 {
+    if (this == &other)
+	{
+		return (*this);
+	}
     for (int i = 0; i < mCount; i++)
     {
         delete mSources[i];

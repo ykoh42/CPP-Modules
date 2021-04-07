@@ -37,6 +37,10 @@ Character::~Character(void)
 
 Character&          Character::operator=(const Character& other)
 {
+	if (this == &other)
+	{
+		return (*this);
+	}
     mName = other.mName;
     for (int i = 0; i < mCount; i++)
     {

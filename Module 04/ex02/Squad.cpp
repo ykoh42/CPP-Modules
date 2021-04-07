@@ -25,6 +25,10 @@ Squad::~Squad(void)
 
 Squad&          Squad::operator=(const Squad& other)
 {
+	if (this == &other)
+	{
+		return (*this);
+	}
     if (mUnits)
     {
         for (int i = 0; i < mCount; i++)

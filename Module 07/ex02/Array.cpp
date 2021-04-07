@@ -34,6 +34,10 @@ Array<T>::~Array(void)
 template<typename T>
 Array<T>&		Array<T>::operator=(const Array& other)
 {
+	if (this == &other)
+	{
+		return (*this);
+	}
 	mSize = other.mSize;
 
 	delete[] mElems;
