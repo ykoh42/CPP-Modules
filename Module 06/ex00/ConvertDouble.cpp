@@ -24,7 +24,7 @@ ConvertDouble::ConvertDouble(const std::string& str)
     }
     else if (GetType() == INT)
     {
-        mValue = static_cast<double>(std::stoll(str));
+        mValue = static_cast<double>(std::atol(str.c_str()));
     }
     else if (GetType() == FLOAT)
     {

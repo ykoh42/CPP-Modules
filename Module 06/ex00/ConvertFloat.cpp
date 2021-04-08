@@ -24,7 +24,7 @@ ConvertFloat::ConvertFloat(const std::string& str)
     }
     else if (GetType() == INT)
     {
-        mValue = static_cast<float>(std::stoll(str));
+        mValue = static_cast<float>(std::atol(str.c_str()));
     }
     else if (GetType() == FLOAT)
     {
