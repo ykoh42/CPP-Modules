@@ -23,35 +23,47 @@ Base*   generate(void)
 
 void    identify_from_pointer(Base* p)
 {
-    try
+    if (dynamic_cast<A*>(p) != 0)
     {
-        if (dynamic_cast<A*>(p) != 0)
-        {
-            std::cout << "A" << std::endl;
-        }
-        else if (dynamic_cast<B*>(p) != 0)
-        {
-            std::cout << "B" << std::endl;
-        }
-        else if (dynamic_cast<C*>(p) != 0)
-        {
-            std::cout << "C" << std::endl;
-        }
-        else
-        {
-            std::cout << "Can not identify." << std::endl;
-        }
-        
+        std::cout << "A" << std::endl;
     }
-    catch (std::exception& e)
+    else if (dynamic_cast<B*>(p) != 0)
     {
-        std::cout << "Exception: " << e.what();
+        std::cout << "B" << std::endl;
+    }
+    else if (dynamic_cast<C*>(p) != 0)
+    {
+        std::cout << "C" << std::endl;
     }
 }
 
 void    identify_from_reference(Base& p)
 {
-    identify_from_pointer(&p);
+
+    try
+    {
+        (void)dynamic_cast<A&>(p);
+        std::cout << "A" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+    }
+    try
+    {
+        (void)dynamic_cast<B&>(p);
+        std::cout << "B" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+    }
+    try
+    {
+        (void)dynamic_cast<C&>(p);
+        std::cout << "C" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+    }
 }
 
 int     main(void)
