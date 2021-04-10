@@ -18,7 +18,7 @@ ConvertChar::ConvertChar(const std::string& str)
         {
             if (str.length() == 1)
             {
-                mValue = str.at(0);
+                mValue = static_cast<char>(str.at(0));
             }
         }
     }

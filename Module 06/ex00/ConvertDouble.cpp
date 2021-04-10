@@ -12,13 +12,13 @@ ConvertDouble::ConvertDouble(const std::string& str)
     {
         try
         {
-            mValue = static_cast<char>(std::stoi(str));
+            mValue = static_cast<double>(std::stoi(str));
         }
         catch(const std::exception& e)
         {
             if (str.length() == 1)
             {
-                mValue = str.at(0);
+                mValue = static_cast<double>(str.at(0));
             }
         }
     }

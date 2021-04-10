@@ -12,13 +12,13 @@ ConvertFloat::ConvertFloat(const std::string& str)
     {
         try
         {
-            mValue = static_cast<char>(std::stoi(str));
+            mValue = static_cast<float>(std::stoi(str));
         }
         catch(const std::exception& e)
         {
             if (str.length() == 1)
             {
-                mValue = str.at(0);
+                mValue = static_cast<float>(str.at(0));
             }
         }
     }
