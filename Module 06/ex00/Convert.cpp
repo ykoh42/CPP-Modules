@@ -96,7 +96,16 @@ void        Convert::setType(const std::string& str)
             }
             else
             {
-                found = str.find_first_of("+-");
+                found = str.find("+");
+                if (found != std::string::npos)
+                {
+                    if (found != 0)
+                    {
+                        mType = IMPOSSIBLE;
+                        return ;
+                    }
+                }
+                found = str.find("-", found + 1);
                 if (found != std::string::npos)
                 {
                     if (found != 0)
