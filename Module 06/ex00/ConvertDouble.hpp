@@ -10,14 +10,14 @@ public:
 	ConvertDouble(const ConvertDouble& other);
 	virtual ~ConvertDouble(void);
 
-	ConvertDouble&    operator=(const ConvertDouble& other);
+	ConvertDouble&	operator=(const ConvertDouble& other);
 
-    double            GetValue(void) const;
+	double			GetValue(void) const;
 
 private:
 	ConvertDouble(void);
 
-    double            mValue;
+	double			mValue;
 };
 
 #endif

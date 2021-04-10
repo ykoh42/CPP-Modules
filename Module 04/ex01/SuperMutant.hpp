@@ -10,9 +10,9 @@ public:
 	SuperMutant(const SuperMutant& other);
 	~SuperMutant(void);
 
-	SuperMutant&    operator=(const SuperMutant& other);
+	SuperMutant&	operator=(const SuperMutant& other);
 
-    void            takeDamage(int damage);
+	void			takeDamage(int damage);
 };
 
 #endif

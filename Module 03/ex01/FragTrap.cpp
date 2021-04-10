@@ -1,171 +1,168 @@
 #include "FragTrap.hpp"
 
-std::string FragTrap::mList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
+std::string	FragTrap::mList[5] = {"PeePee!", "PooPoo!", "throwing paci!", "BooBoo Attack!", "Covering blanky!"};
 
 FragTrap::FragTrap(void)
-    : mName("undefined")
-    , mHitPoints(100)
-    , mEnergyPoints(100)
-    , mMaxHitPoints(100)
-    , mMaxEnergyPoints(100)
-    , mLevel(1)
-    , mMeleeAttackDamage(30)
-    , mRangedAttackDamage(20)
-    , mArmorDamageReduction(5)
+	: mName("undefined")
+	, mHitPoints(100)
+	, mEnergyPoints(100)
+	, mMaxHitPoints(100)
+	, mMaxEnergyPoints(100)
+	, mLevel(1)
+	, mMeleeAttackDamage(30)
+	, mRangedAttackDamage(20)
+	, mArmorDamageReduction(5)
 {
-    srand(time(NULL));
-    std::cout << mName
-                << " is booted! HURRAY!" << std::endl;
+	srand(time(NULL));
+	std::cout << mName << " is booted! HURRAY!" << std::endl;
 }
 
 FragTrap::FragTrap(const std::string& name)
-    : mName(name)
-    , mHitPoints(100)
-    , mEnergyPoints(100)
-    , mMaxHitPoints(100)
-    , mMaxEnergyPoints(100)
-    , mLevel(1)
-    , mMeleeAttackDamage(30)
-    , mRangedAttackDamage(20)
-    , mArmorDamageReduction(5)
+	: mName(name)
+	, mHitPoints(100)
+	, mEnergyPoints(100)
+	, mMaxHitPoints(100)
+	, mMaxEnergyPoints(100)
+	, mLevel(1)
+	, mMeleeAttackDamage(30)
+	, mRangedAttackDamage(20)
+	, mArmorDamageReduction(5)
 {
-    srand(time(NULL));
-    std::cout << mName
-                << " is booted! HURRAY!" << std::endl;
+	srand(time(NULL));
+	std::cout << mName << " is booted! HURRAY!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& other)
 {
-    srand(time(NULL));
-    *this = other;
-    std::cout << mName
-            << " is booted! HURRAY!" << std::endl;
+	srand(time(NULL));
+	*this = other;
+	std::cout << mName << " is booted! HURRAY!" << std::endl;
 }
 
-FragTrap&   FragTrap::operator=(const FragTrap& other)
+FragTrap&	FragTrap::operator=(const FragTrap& other)
 {
-    mName = other.mName;
-    mHitPoints = other.mHitPoints;
-    mEnergyPoints = other.mEnergyPoints;
-    mMaxHitPoints = other.mMaxHitPoints;
-    mMaxEnergyPoints = other.mMaxEnergyPoints;
-    mLevel = other.mLevel;
-    mMeleeAttackDamage = other.mMeleeAttackDamage;
-    mRangedAttackDamage = other.mRangedAttackDamage;
-    mArmorDamageReduction = other.mArmorDamageReduction;
-    return (*this);
+	mName = other.mName;
+	mHitPoints = other.mHitPoints;
+	mEnergyPoints = other.mEnergyPoints;
+	mMaxHitPoints = other.mMaxHitPoints;
+	mMaxEnergyPoints = other.mMaxEnergyPoints;
+	mLevel = other.mLevel;
+	mMeleeAttackDamage = other.mMeleeAttackDamage;
+	mRangedAttackDamage = other.mRangedAttackDamage;
+	mArmorDamageReduction = other.mArmorDamageReduction;
+	return (*this);
 }
 
 FragTrap::~FragTrap(void)
 {
-    std::cout << "Am I dead? UNBELIEVABLE!" << std::endl;
+	std::cout << "Am I dead? UNBELIEVABLE!" << std::endl;
 }
 
-void        FragTrap::rangedAttack(std::string const & target)
+void		FragTrap::rangedAttack(const std::string& target)
 {
-    if (getHitPoints() > 0)
-    {
-        std::cout << "FR4G-TP "
-                    << "<" << mName << ">"
-                    << " attacks "
-                    << "<" << target << ">"
-                    << " at range, causing "
-                    << "<" << mRangedAttackDamage << ">"
-                    << " points of damage!" << std::endl;
-    }
+	if (getHitPoints() > 0)
+	{
+		std::cout << "FR4G-TP "
+					<< "<" << mName << ">"
+					<< " attacks "
+					<< "<" << target << ">"
+					<< " at range, causing "
+					<< "<" << mRangedAttackDamage << ">"
+					<< " points of damage!" << std::endl;
+	}
 }
 
-void        FragTrap::meleeAttack(std::string const & target)
+void		FragTrap::meleeAttack(const std::string& target)
 {
-    if (getHitPoints() > 0)
-    {
-        std::cout << "FR4G-TP "
-                    << "<" << mName << ">"
-                    << " attacks "
-                    << "<" << target << ">"
-                    << " at melee, causing "
-                    << "<" << mMeleeAttackDamage << ">"
-                    << " points of damage!" << std::endl;
-    }
+	if (getHitPoints() > 0)
+	{
+		std::cout << "FR4G-TP "
+					<< "<" << mName << ">"
+					<< " attacks "
+					<< "<" << target << ">"
+					<< " at melee, causing "
+					<< "<" << mMeleeAttackDamage << ">"
+					<< " points of damage!" << std::endl;
+	}
 }
 
-void        FragTrap::takeDamage(unsigned int amount)
+void		FragTrap::takeDamage(unsigned int amount)
 {
-    if (getHitPoints() > 0)
-    {
-        int damage = amount - mArmorDamageReduction;
+	if (getHitPoints() > 0)
+	{
+		int damage = amount - mArmorDamageReduction;
 
-        if (damage < 0)
-        {
-            damage = 0;
-        }
-        mHitPoints -= damage;
-        if (mHitPoints > 0)
-        {
-            std::cout << "<" << mName << ">"
-                        << " takes "
-                        << "<" << damage << ">"
-                        << " damages! " << std::endl;
-        }
-        else
-        {
-            mHitPoints = 0;
-            std::cout << "<" << mName << ">"
-                        << " is broken! " << std::endl;
-        }
-    }
-    else
-    {
-            std::cout << "<" << mName << ">"
-                        << " was already broken! " << std::endl;
-    }
+		if (damage < 0)
+		{
+			damage = 0;
+		}
+		mHitPoints -= damage;
+		if (mHitPoints > 0)
+		{
+			std::cout << "<" << mName << ">"
+						<< " takes "
+						<< "<" << damage << ">"
+						<< " damages! " << std::endl;
+		}
+		else
+		{
+			mHitPoints = 0;
+			std::cout << "<" << mName << ">"
+						<< " is broken! " << std::endl;
+		}
+	}
+	else
+	{
+			std::cout << "<" << mName << ">"
+						<< " was already broken! " << std::endl;
+	}
 }
 
-void        FragTrap::beRepaired(unsigned int amount)
+void		FragTrap::beRepaired(unsigned int amount)
 {
-    mHitPoints += amount;
-    if (mHitPoints > mMaxHitPoints)
-    {
-        mHitPoints = mMaxHitPoints;
-    }
-    std::cout << "<" << mName << "> "
-                << "has been repaired!"
-                << " <" <<  mHitPoints << ">" << std::endl;
+	mHitPoints += amount;
+	if (mHitPoints > mMaxHitPoints)
+	{
+		mHitPoints = mMaxHitPoints;
+	}
+	std::cout << "<" << mName << "> "
+				<< "has been repaired!"
+				<< " <" <<  mHitPoints << ">" << std::endl;
 }
 
-void        FragTrap::vaulthunter_dot_exe(std::string const & target)
+void		FragTrap::vaulthunter_dot_exe(const std::string& target)
 {
-    if (getHitPoints() > 0)
-    {
-        if (mEnergyPoints >= 25)
-        {
-            mEnergyPoints -= 25;
-            if (mEnergyPoints < 0)
-            {
-                mEnergyPoints = 0;
-            }
-            else if (mEnergyPoints > mMaxEnergyPoints)
-            {
-                mEnergyPoints = mMaxEnergyPoints;
-            }
-            std::cout << "FR4G-TP "
-                        << "<" << mName << ">"
-                        << " attacks "
-                        << "<" << target << ">"
-                        << " at " << mList[rand() % 5] << ", causing "
-                        << "<" << 0 << ">"
-                        << " points of damage! USELESS!" << std::endl;
-        }
-        else
-        {
-            std::cout << "FR4G-TP "
-                        << "<" << mName << ">"
-                        << " not enough engery!" << std::endl;
-        }
-    }
+	if (getHitPoints() > 0)
+	{
+		if (mEnergyPoints >= 25)
+		{
+			mEnergyPoints -= 25;
+			if (mEnergyPoints < 0)
+			{
+				mEnergyPoints = 0;
+			}
+			else if (mEnergyPoints > mMaxEnergyPoints)
+			{
+				mEnergyPoints = mMaxEnergyPoints;
+			}
+			std::cout << "FR4G-TP "
+						<< "<" << mName << ">"
+						<< " attacks "
+						<< "<" << target << ">"
+						<< " at " << mList[rand() % 5] << ", causing "
+						<< "<" << 0 << ">"
+						<< " points of damage! USELESS!" << std::endl;
+		}
+		else
+		{
+			std::cout << "FR4G-TP "
+						<< "<" << mName << ">"
+						<< " not enough engery!" << std::endl;
+		}
+	}
 }
 
-const int&  FragTrap::getHitPoints(void) const
+const int&	FragTrap::getHitPoints(void) const
 {
-    return (mHitPoints);
+	return (mHitPoints);
 }

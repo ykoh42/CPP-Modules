@@ -10,14 +10,14 @@ public:
 	ConvertFloat(const ConvertFloat& other);
 	virtual ~ConvertFloat(void);
 
-	ConvertFloat&    operator=(const ConvertFloat& other);
+	ConvertFloat&	operator=(const ConvertFloat& other);
 
-    float            GetValue(void) const;
+	float			GetValue(void) const;
 
 private:
 	ConvertFloat(void);
 
-    float            mValue;
+	float			mValue;
 };
 
 #endif

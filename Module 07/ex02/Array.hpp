@@ -24,7 +24,7 @@ private:
 	T*				mElems;
 
 	class OutOfBoundsException : public std::exception {
-		virtual const char* what(void) const throw();
+		virtual const char*	what(void) const throw();
 	};
 };
 

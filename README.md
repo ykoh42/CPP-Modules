@@ -132,25 +132,32 @@
 | ex00, ex01, ex02, ex03 | Nested classes, Exceptions |
 
 ### Nested classes
+ - 클래스 안에 클래스를 내포시킬 수 있음.
 
 ### Exceptions
+ - exception 클래스를 통해 다양한 예외처리 가능.
 
 ## Module 06
 
-
 ### Casts
+ - https://www.cplusplus.com/doc/oldtutorial/typecasting/
 
 #### dynamic_cast
  - 캐스팅에 실패할 때, 대상이 포인터라면 널을 리턴하고, 참조자였다면 bad_cast 예외를 던진다.
 
-
-
 ## Module 07
 
 ### Templates
+ - https://www.cplusplus.com/doc/oldtutorial/templates/
 
 ## Module 08
 
-Templated containers, iterators, algorithms
+### containers
+ - 객체들의 집합, 탬플릿 클래스로 정의
 
+### iterators
+ - 컨테이너의 각 요소에 접근을 제공하는 객체
+
+### algorithms
+ - https://www.cplusplus.com/reference/algorithm/
 

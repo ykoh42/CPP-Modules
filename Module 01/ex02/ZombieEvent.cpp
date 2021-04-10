@@ -5,7 +5,7 @@ ZombieEvent::ZombieEvent(void)
 	std::srand(std::time(NULL));
 }
 
-void 		ZombieEvent::setZombieType(const std::string& type)
+void		ZombieEvent::setZombieType(const std::string& type)
 {
 	this->type = type;
 }
@@ -22,7 +22,7 @@ Zombie*		ZombieEvent::randomChump(void)
 
 	for (std::string::size_type i = 0; i < 10; i++)
 	{
-		 name.push_back(alphabet[rand() % alphabet.length()]);
+		name.push_back(alphabet[rand() % alphabet.length()]);
 	}
 	Zombie*	zombie = new Zombie(this->type, name);
 	zombie->announce();

@@ -11,15 +11,15 @@ public:
 	ShrubberyCreationForm(const ShrubberyCreationForm& other);
 	virtual ~ShrubberyCreationForm(void);
 
-	ShrubberyCreationForm&      operator=(const ShrubberyCreationForm& other);
+	ShrubberyCreationForm&		operator=(const ShrubberyCreationForm& other);
 
-	void		                execute(const Bureaucrat& bureaucrat) const;
+	void						execute(const Bureaucrat& bureaucrat) const;
 
 private:
 	ShrubberyCreationForm(void);
 
-	std::string                 mTarget;
-    static const std::string    mAsciiTree;
+	std::string					mTarget;
+	static const std::string	mAsciiTree;
 };
 
 #endif

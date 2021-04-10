@@ -11,22 +11,22 @@ public:
 	ClapTrap(const ClapTrap& other);
 	~ClapTrap(void);
 
-	ClapTrap&	        operator=(const ClapTrap& other);
-    void                takeDamage(unsigned int amount);
-    void                beRepaired(unsigned int amount);
-    const int&          getHitPoints(void) const;
-    const std::string&  getName(void) const;
+	ClapTrap&			operator=(const ClapTrap& other);
+	void				takeDamage(unsigned int amount);
+	void				beRepaired(unsigned int amount);
+	const int&			getHitPoints(void) const;
+	const std::string&	getName(void) const;
 
 protected:
-    std::string         mName;
-    int                 mHitPoints;
-    int                 mEnergyPoints;
-    int                 mMaxHitPoints;
-    int                 mMaxEnergyPoints;
-    int                 mLevel;
-    int                 mMeleeAttackDamage;
-    int                 mRangedAttackDamage;
-    int                 mArmorDamageReduction;
+	std::string			mName;
+	int					mHitPoints;
+	int					mEnergyPoints;
+	int					mMaxHitPoints;
+	int					mMaxEnergyPoints;
+	int					mLevel;
+	int					mMeleeAttackDamage;
+	int					mRangedAttackDamage;
+	int					mArmorDamageReduction;
 
 };
 

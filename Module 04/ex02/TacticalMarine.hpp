@@ -13,10 +13,10 @@ public:
 
 	TacticalMarine& operator=(const TacticalMarine& other);
 
-	ISpaceMarine*   clone(void) const;
-	void            battleCry(void) const;
-	void            rangedAttack(void) const;
-	void            meleeAttack(void) const;
+	ISpaceMarine*	clone(void) const;
+	void			battleCry(void) const;
+	void			rangedAttack(void) const;
+	void			meleeAttack(void) const;
 };
 
 #endif

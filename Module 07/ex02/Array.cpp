@@ -54,7 +54,7 @@ Array<T>&		Array<T>::operator=(const Array& other)
 }
 
 template<typename T>
-T&			Array<T>::operator[](unsigned int index)
+T&				Array<T>::operator[](unsigned int index)
 {
 	if (index >= mSize)
 	{
@@ -67,7 +67,7 @@ T&			Array<T>::operator[](unsigned int index)
 }
 
 template<typename T>
-const T&	Array<T>::operator[](unsigned int index) const
+const T&		Array<T>::operator[](unsigned int index) const
 {
 	if (index >= mSize)
 	{

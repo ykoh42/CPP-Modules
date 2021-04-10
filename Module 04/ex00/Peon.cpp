@@ -1,36 +1,36 @@
 #include "Peon.hpp"
 
 Peon::Peon(void)
-    : Victim()
+	: Victim()
 {
-    std::cout << "Zog zog." << std::endl;
+	std::cout << "Zog zog." << std::endl;
 }
 
 Peon::Peon(const std::string& name)
-    : Victim(name)
+	: Victim(name)
 {
-    std::cout << "Zog zog." << std::endl;
+	std::cout << "Zog zog." << std::endl;
 }
 
 Peon::Peon(const Peon& other)
-    : Victim(other)
+	: Victim(other)
 {
-    *this = other;
-    std::cout << "Zog zog." << std::endl;
+	*this = other;
+	std::cout << "Zog zog." << std::endl;
 }
 
 Peon::~Peon(void)
 {
-    std::cout << "Bleuark..." << std::endl;
+	std::cout << "Bleuark..." << std::endl;
 }
 
-void    Peon::getPolymorphed(void) const
+Peon&	Peon::operator=(const Peon& other)
 {
-    std::cout << GetName() << " has been turned into a pink pony!" << std::endl;
+	SetName(other.GetName());
+	return (*this);
 }
 
-Peon&   Peon::operator=(const Peon& other)
+void	Peon::getPolymorphed(void) const
 {
-    SetName(other.GetName());
-    return (*this);
+	std::cout << GetName() << " has been turned into a pink pony!" << std::endl;
 }

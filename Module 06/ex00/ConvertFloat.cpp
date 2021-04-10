@@ -1,62 +1,62 @@
 #include "ConvertFloat.hpp"
 
 ConvertFloat::ConvertFloat(void)
-    : Convert()
+	: Convert()
 {
 }
 
 ConvertFloat::ConvertFloat(const std::string& str)
-    : Convert(str)
+	: Convert(str)
 {
-    if (GetType() == CHAR)
-    {
-        try
-        {
-            mValue = static_cast<float>(std::stoi(str));
-        }
-        catch(const std::exception& e)
-        {
-            if (str.length() == 1)
-            {
-                mValue = static_cast<float>(str.at(0));
-            }
-        }
-    }
-    else if (GetType() == INT)
-    {
-        mValue = static_cast<float>(std::atol(str.c_str()));
-    }
-    else if (GetType() == FLOAT)
-    {
-        mValue = static_cast<float>(std::stof(str));
-    }
-    else if (GetType() == DOUBLE)
-    {
-        mValue = static_cast<float>(std::stod(str));
-    }
-    else
-    {
-        throw ImpossibleException();
-    }
+	if (GetType() == CHAR)
+	{
+		try
+		{
+			mValue = static_cast<float>(std::stoi(str));
+		}
+		catch(const std::exception& e)
+		{
+			if (str.length() == 1)
+			{
+				mValue = static_cast<float>(str.at(0));
+			}
+		}
+	}
+	else if (GetType() == INT)
+	{
+		mValue = static_cast<float>(std::atol(str.c_str()));
+	}
+	else if (GetType() == FLOAT)
+	{
+		mValue = static_cast<float>(std::stof(str));
+	}
+	else if (GetType() == DOUBLE)
+	{
+		mValue = static_cast<float>(std::stod(str));
+	}
+	else
+	{
+		throw ImpossibleException();
+	}
 }
 
 ConvertFloat::ConvertFloat(const ConvertFloat& other)
-    : Convert(other)
+	: Convert(other)
 {
-    *this = other;
+	*this = other;
 }
 
 ConvertFloat::~ConvertFloat(void)
 {
 }
 
-ConvertFloat&    ConvertFloat::operator=(const ConvertFloat& other)
+ConvertFloat&	ConvertFloat::operator=(const ConvertFloat& other)
 {
-    mValue = other.mValue;
-    return (*this);
+	mValue = other.mValue;
+	return (*this);
 }
 
-float            ConvertFloat::GetValue(void) const
+float			ConvertFloat::GetValue(void) const
 {
-    return (mValue);
+	return (mValue);
 }

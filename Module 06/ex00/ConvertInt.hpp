@@ -10,14 +10,14 @@ public:
 	ConvertInt(const ConvertInt& other);
 	virtual ~ConvertInt(void);
 
-	ConvertInt&    operator=(const ConvertInt& other);
+	ConvertInt&	operator=(const ConvertInt& other);
 
-    int            GetValue(void) const;
+	int			GetValue(void) const;
 
 private:
 	ConvertInt(void);
 
-    int            mValue;
+	int			mValue;
 };
 
 #endif

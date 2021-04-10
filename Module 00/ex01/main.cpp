@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	PhoneBook   phoneBook;
-	std::string cmd;
+	PhoneBook	phoneBook;
+	std::string	cmd;
 
 	while (true)
 	{

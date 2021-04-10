@@ -11,10 +11,10 @@ public:
 	Peon(const Peon& other);
 	virtual ~Peon();
 
-	Peon&   operator=(const Peon& other);
+	Peon&	operator=(const Peon& other);
 
 private:
-    void    getPolymorphed(void) const;
+	void	getPolymorphed(void) const;
 };
 
 #endif

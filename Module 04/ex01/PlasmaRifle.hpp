@@ -10,9 +10,9 @@ public:
 	PlasmaRifle(const PlasmaRifle& other);
 	virtual ~PlasmaRifle(void);
 
-	PlasmaRifle&    operator=(const PlasmaRifle& other);
+	PlasmaRifle&	operator=(const PlasmaRifle& other);
 
-	void            attack(void) const;
+	void			attack(void) const;
 };
 
 #endif

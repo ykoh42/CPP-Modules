@@ -13,13 +13,13 @@ public:
 	NinjaTrap(const NinjaTrap& other);
 	~NinjaTrap(void);
 
-	NinjaTrap&	        operator=(const NinjaTrap& other);
-    void                rangedAttack(std::string const & target);
-    void                meleeAttack(std::string const & target);
-	void				ninjaShoebox(FragTrap &trap);
-	void				ninjaShoebox(ScavTrap &trap);
-	void				ninjaShoebox(ClapTrap &trap);
-	void				ninjaShoebox(NinjaTrap &trap);
+	NinjaTrap&			operator=(const NinjaTrap& other);
+	void				rangedAttack(const std::string& target);
+	void				meleeAttack(const std::string& target);
+	void				ninjaShoebox(FragTrap& trap);
+	void				ninjaShoebox(ScavTrap& trap);
+	void				ninjaShoebox(ClapTrap& trap);
+	void				ninjaShoebox(NinjaTrap& trap);
 };
 
 #endif

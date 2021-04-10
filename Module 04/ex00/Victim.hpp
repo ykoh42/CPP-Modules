@@ -11,16 +11,16 @@ public:
 	Victim(const Victim& other);
 	virtual ~Victim(void);
 
-	Victim&             operator=(const Victim& other);
+	Victim&				operator=(const Victim& other);
 
-    const std::string&  GetName(void) const;
-    void				SetName(const std::string& name);
-    virtual void        getPolymorphed(void) const;
+	const std::string&	GetName(void) const;
+	void				SetName(const std::string& name);
+	virtual void		getPolymorphed(void) const;
 
 private:
-	std::string         mName;
+	std::string			mName;
 };
 
-std::ostream&           operator<<(std::ostream& os, const Victim& victim);
+std::ostream&			operator<<(std::ostream& os, const Victim& victim);
 
 #endif

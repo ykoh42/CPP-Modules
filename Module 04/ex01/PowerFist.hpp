@@ -10,9 +10,9 @@ public:
 	PowerFist(const PowerFist& other);
 	virtual ~PowerFist(void);
 
-	PowerFist&    operator=(const PowerFist& other);
+	PowerFist&	operator=(const PowerFist& other);
 
-	void            attack(void) const;
+	void		attack(void) const;
 };
 
 #endif

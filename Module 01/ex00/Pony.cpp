@@ -7,12 +7,12 @@ Pony::Pony(const std::string& name)
 
 }
 
-void Pony::Cry(void)
+void	Pony::Cry(void)
 {
 	std::cout << name << "NEIGH~" << name << std::endl;
 }
 
-void Pony::Run(void)
+void	Pony::Run(void)
 {
 	std::cout << name << "🐎💨💨" << name << std::endl;
 }

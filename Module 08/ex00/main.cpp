@@ -8,7 +8,7 @@
 int main(void)
 {
 	{
-		std::deque<int> deque;
+		std::deque<int>	deque;
 
 		for (int i = 0; i < 5; i++)
 		{
@@ -25,7 +25,7 @@ int main(void)
 		}
 	}
 	{
-		std::list<int> list;
+		std::list<int>	list;
 
 		for (int i = 0; i < 5; i++)
 		{
@@ -42,7 +42,7 @@ int main(void)
 		}
 	}
 	{
-		std::set<int> set;
+		std::set<int>	set;
 		for (int i = 0; i < 5; i++)
 		{
 			set.insert(i);
@@ -59,7 +59,7 @@ int main(void)
 		}
 	}
 	{
-		std::multiset<int> set;
+		std::multiset<int>	set;
 		for (int i = 0; i < 5; i++)
 		{
 			set.insert(i);
@@ -67,7 +67,7 @@ int main(void)
 
 		try
 		{
-			std::multiset<int>::iterator found = easyfind(set, 4);
+			std::multiset<int>::iterator	found = easyfind(set, 4);
 			std::cout << *found << std::endl;
 		}
 		catch(const std::exception& e)
@@ -83,7 +83,7 @@ int main(void)
 		}
 		try
 		{
-			std::vector<int>::iterator found = easyfind(vec, 4);
+			std::vector<int>::iterator	found = easyfind(vec, 4);
 			std::cout << *found << std::endl;
 		}
 		catch(const std::exception& e)
@@ -99,7 +99,7 @@ int main(void)
 		}
 		try
 		{
-			std::vector<int>::iterator found = easyfind(vec, 5);
+			std::vector<int>::iterator	found = easyfind(vec, 5);
 			std::cout << *found << std::endl;
 		}
 		catch(const std::exception& e)

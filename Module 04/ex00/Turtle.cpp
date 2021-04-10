@@ -1,36 +1,36 @@
 #include "Turtle.hpp"
 
 Turtle::Turtle(void)
-    : Victim()
+	: Victim()
 {
-    std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
+	std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
 }
 
 Turtle::Turtle(const std::string& name)
-    : Victim(name)
+	: Victim(name)
 {
-    std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
+	std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
 }
 
 Turtle::Turtle(const Turtle& other)
-    : Victim(other)
+	: Victim(other)
 {
-    *this = other;
-    std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
+	*this = other;
+	std::cout << "SQUIRTLE SQUIRTLE." << std::endl;
 }
 
 Turtle::~Turtle(void)
 {
-    std::cout << "Squir......" << std::endl;
+	std::cout << "Squir......" << std::endl;
 }
 
-void    Turtle::getPolymorphed(void) const
+Turtle&	Turtle::operator=(const Turtle& other)
 {
-    std::cout << GetName() << " has been turned into a stone!" << std::endl;
+	SetName(other.GetName());
+	return (*this);
 }
 
-Turtle&   Turtle::operator=(const Turtle& other)
+void	Turtle::getPolymorphed(void) const
 {
-    SetName(other.GetName());
-    return (*this);
+	std::cout << GetName() << " has been turned into a stone!" << std::endl;
 }

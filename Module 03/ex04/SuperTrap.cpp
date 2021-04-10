@@ -1,75 +1,72 @@
 #include "SuperTrap.hpp"
 
 SuperTrap::SuperTrap(void)
-    : ClapTrap()
-    , FragTrap()
-    , NinjaTrap()
+	: ClapTrap()
+	, FragTrap()
+	, NinjaTrap()
 {
-    srand(time(NULL));
-    mHitPoints = 100;
-    mMaxHitPoints = 100;
-    mEnergyPoints = 120;
-    mMaxEnergyPoints = 120;
-    mMeleeAttackDamage = 60;
-    mRangedAttackDamage = 20;
-    mArmorDamageReduction = 5;
-    std::cout << mName
-                << " THE SUPERMAN Gen!" << std::endl;
+	srand(time(NULL));
+	mHitPoints = 100;
+	mMaxHitPoints = 100;
+	mEnergyPoints = 120;
+	mMaxEnergyPoints = 120;
+	mMeleeAttackDamage = 60;
+	mRangedAttackDamage = 20;
+	mArmorDamageReduction = 5;
+	std::cout << mName << " THE SUPERMAN Gen!" << std::endl;
 }
 
 SuperTrap::SuperTrap(const std::string& name)
-    : ClapTrap(name)
-    , FragTrap(name)
-    , NinjaTrap(name)
+	: ClapTrap(name)
+	, FragTrap(name)
+	, NinjaTrap(name)
 {
-    srand(time(NULL));
-    mHitPoints = 100;
-    mMaxHitPoints = 100;
-    mEnergyPoints = 120;
-    mMaxEnergyPoints = 120;
-    mMeleeAttackDamage = 60;
-    mRangedAttackDamage = 20;
-    mArmorDamageReduction = 5;
-    std::cout << mName
-                << " THE SUPERMAN Gen!" << std::endl;
+	srand(time(NULL));
+	mHitPoints = 100;
+	mMaxHitPoints = 100;
+	mEnergyPoints = 120;
+	mMaxEnergyPoints = 120;
+	mMeleeAttackDamage = 60;
+	mRangedAttackDamage = 20;
+	mArmorDamageReduction = 5;
+	std::cout << mName << " THE SUPERMAN Gen!" << std::endl;
 }
 
 SuperTrap::SuperTrap(const SuperTrap& other)
-    : ClapTrap(other)
-    , FragTrap(other)
-    , NinjaTrap(other)
+	: ClapTrap(other)
+	, FragTrap(other)
+	, NinjaTrap(other)
 {
-    srand(time(NULL));
-    *this = other;
-    std::cout << mName
-            << " THE SUPERMAN Gen!" << std::endl;
-}
-
-SuperTrap&   SuperTrap::operator=(const SuperTrap& other)
-{
-    mName = other.mName;
-    mHitPoints = other.mHitPoints;
-    mEnergyPoints = other.mEnergyPoints;
-    mMaxHitPoints = other.mMaxHitPoints;
-    mMaxEnergyPoints = other.mMaxEnergyPoints;
-    mLevel = other.mLevel;
-    mMeleeAttackDamage = other.mMeleeAttackDamage;
-    mRangedAttackDamage = other.mRangedAttackDamage;
-    mArmorDamageReduction = other.mArmorDamageReduction;
-    return (*this);
+	srand(time(NULL));
+	*this = other;
+	std::cout << mName << " THE SUPERMAN Gen!" << std::endl;
 }
 
 SuperTrap::~SuperTrap(void)
 {
-    std::cout << "SUPERMAN destroyed!!" << std::endl;
+	std::cout << "SUPERMAN destroyed!!" << std::endl;
 }
 
-void        SuperTrap::rangedAttack(std::string const & target)
+SuperTrap&	SuperTrap::operator=(const SuperTrap& other)
 {
-    FragTrap::rangedAttack(target);
+	mName = other.mName;
+	mHitPoints = other.mHitPoints;
+	mEnergyPoints = other.mEnergyPoints;
+	mMaxHitPoints = other.mMaxHitPoints;
+	mMaxEnergyPoints = other.mMaxEnergyPoints;
+	mLevel = other.mLevel;
+	mMeleeAttackDamage = other.mMeleeAttackDamage;
+	mRangedAttackDamage = other.mRangedAttackDamage;
+	mArmorDamageReduction = other.mArmorDamageReduction;
+	return (*this);
 }
 
-void        SuperTrap::meleeAttack(std::string const & target)
+void		SuperTrap::rangedAttack(const std::string& target)
 {
-    NinjaTrap::meleeAttack(target);
+	FragTrap::rangedAttack(target);
+}
+
+void		SuperTrap::meleeAttack(const std::string& target)
+{
+	NinjaTrap::meleeAttack(target);
 }

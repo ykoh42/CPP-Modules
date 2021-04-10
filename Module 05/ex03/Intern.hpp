@@ -21,8 +21,8 @@ private:
 	static const std::string	mForms[3];
 };
 
-Form*						newShrubberyCreation(const std::string& target);
-Form*						newRobotomyRequest(const std::string& target);
-Form*						newPresidentialPardon(const std::string& target);
+Form*							newShrubberyCreation(const std::string& target);
+Form*							newRobotomyRequest(const std::string& target);
+Form*							newPresidentialPardon(const std::string& target);
 
 #endif

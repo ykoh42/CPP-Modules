@@ -12,30 +12,30 @@ public:
 	Convert(const Convert& other);
 	virtual ~Convert(void);
 
-	Convert&    operator=(const Convert& other);
+	Convert&	operator=(const Convert& other);
 
-    const int&  GetType(void) const;
+	const int&	GetType(void) const;
 
-    enum Type
-    {
-        IMPOSSIBLE,
-        CHAR,
-        INT,
-        FLOAT,
-        DOUBLE
-    };
+	enum Type
+	{
+		IMPOSSIBLE,
+		CHAR,
+		INT,
+		FLOAT,
+		DOUBLE
+	};
 
 	class ImpossibleException : public std::exception
 	{
-		virtual const char* what(void) const throw();
+		virtual const char*	what(void) const throw();
 	};
 
 
 private:
-    void        setType(const std::string& str);
-    bool        isTwice(const std::string& str, const char needle) const;
+	void		setType(const std::string& str);
+	bool		isTwice(const std::string& str, const char needle) const;
 
-    int         mType;
+	int			mType;
 };
 
 #endif

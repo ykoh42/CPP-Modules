@@ -11,13 +11,13 @@ public:
 	ScavTrap(const ScavTrap& other);
 	~ScavTrap(void);
 
-	ScavTrap&	        operator=(const ScavTrap& other);
-    void                rangedAttack(std::string const & target);
-    void                meleeAttack(std::string const & target);
-    void                challengeNewcomer(std::string const & target);
+	ScavTrap&			operator=(const ScavTrap& other);
+	void				rangedAttack(const std::string& target);
+	void				meleeAttack(const std::string& target);
+	void				challengeNewcomer(const std::string& target);
 
 private:
-    static std::string  mList[5];
+	static std::string  mList[5];
 };
 
 #endif

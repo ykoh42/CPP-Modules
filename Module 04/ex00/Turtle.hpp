@@ -11,10 +11,10 @@ public:
 	Turtle(const Turtle& other);
 	virtual ~Turtle();
 
-	Turtle&   operator=(const Turtle& other);
+	Turtle&	operator=(const Turtle& other);
 
 private:
-    void    getPolymorphed(void) const;
+	void	getPolymorphed(void) const;
 };
 
 #endif

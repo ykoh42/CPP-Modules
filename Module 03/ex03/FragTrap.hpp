@@ -11,13 +11,13 @@ public:
 	FragTrap(const FragTrap& other);
 	~FragTrap(void);
 
-	FragTrap&	        operator=(const FragTrap& other);
-    void                rangedAttack(std::string const & target);
-    void                meleeAttack(std::string const & target);
-    void                vaulthunter_dot_exe(std::string const & target);
+	FragTrap&			operator=(const FragTrap& other);
+	void				rangedAttack(const std::string& target);
+	void				meleeAttack(const std::string& target);
+	void				vaulthunter_dot_exe(const std::string& target);
 
 private:
-    static std::string  mList[5];
+	static std::string	mList[5];
 };
 
 #endif

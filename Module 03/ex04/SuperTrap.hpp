@@ -12,9 +12,9 @@ public:
 	SuperTrap(const SuperTrap& other);
 	~SuperTrap(void);
 
-	SuperTrap&	        operator=(const SuperTrap& other);
-    void                rangedAttack(std::string const & target);
-    void                meleeAttack(std::string const & target);
+	SuperTrap&			operator=(const SuperTrap& other);
+	void				rangedAttack(const std::string& target);
+	void				meleeAttack(const std::string& target);
 };
 
 #endif

@@ -10,9 +10,9 @@ public:
 	RadScorpion(const RadScorpion& other);
 	~RadScorpion(void);
 
-	RadScorpion&    operator=(const RadScorpion& other);
+	RadScorpion&	operator=(const RadScorpion& other);
 
-    void            takeDamage(int damage);
+	void			takeDamage(int damage);
 };
 
 #endif

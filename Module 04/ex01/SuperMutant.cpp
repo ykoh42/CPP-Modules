@@ -1,31 +1,31 @@
 #include "SuperMutant.hpp"
 
 SuperMutant::SuperMutant(void)
-    : Enemy(170, "Super Mutant")
+	: Enemy(170, "Super Mutant")
 {
-    std::cout << "Gaaah. Me want smash heads!" << std::endl;
+	std::cout << "Gaaah. Me want smash heads!" << std::endl;
 }
 
 SuperMutant::SuperMutant(const SuperMutant& other)
-    : Enemy(other)
+	: Enemy(other)
 {
-    *this = other;
-    std::cout << "Gaaah. Me want smash heads!" << std::endl;
+	*this = other;
+	std::cout << "Gaaah. Me want smash heads!" << std::endl;
 }
 
 SuperMutant::~SuperMutant(void)
 {
-    std::cout << "Aaargh..." << std::endl;
+	std::cout << "Aaargh..." << std::endl;
 }
 
-SuperMutant&    SuperMutant::operator=(const SuperMutant& other)
+SuperMutant&	SuperMutant::operator=(const SuperMutant& other)
 {
-    setHP(other.getHP());
-    setType(other.getType());
-    return (*this);
+	setHP(other.getHP());
+	setType(other.getType());
+	return (*this);
 }
 
-void            SuperMutant::takeDamage(int damage)
+void			SuperMutant::takeDamage(int damage)
 {
-    Enemy::takeDamage(damage - 3);
+	Enemy::takeDamage(damage - 3);
 }

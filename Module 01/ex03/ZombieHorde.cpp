@@ -19,7 +19,7 @@ ZombieHorde::ZombieHorde(const int size)
 
 			for (std::string::size_type i = 0; i < 10; i++)
 			{
-				 name.push_back(alphabet[rand() % alphabet.length()]);
+				name.push_back(alphabet[rand() % alphabet.length()]);
 			}
 			mHorde[i].SetName(name);
 			mHorde[i].SetType("Horde");

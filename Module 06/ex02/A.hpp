@@ -6,11 +6,11 @@
 class A : public Base
 {
 public:
-    A(void);
-    A(const A& other);
-    virtual ~A(void);
+	A(void);
+	A(const A& other);
+	virtual ~A(void);
 
-	A&  operator=(const A& other);
+	A&	operator=(const A& other);
 };
 
 #endif

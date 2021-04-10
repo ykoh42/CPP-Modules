@@ -8,8 +8,8 @@ class Pony
 public:
 	Pony(const std::string& name);
 
-	void Cry(void);
-	void Run(void);
+	void					Cry(void);
+	void					Run(void);
 
 private:
 		const std::string	name;

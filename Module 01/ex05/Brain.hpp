@@ -13,7 +13,7 @@ public:
 	std::string	identify(void) const;
 	
 private:
-	int					mIQ;
+	int			mIQ;
 };
 
 #endif

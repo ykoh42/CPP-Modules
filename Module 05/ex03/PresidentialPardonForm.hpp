@@ -10,14 +10,14 @@ public:
 	PresidentialPardonForm(const PresidentialPardonForm& other);
 	virtual ~PresidentialPardonForm(void);
 
-	PresidentialPardonForm&     operator=(const PresidentialPardonForm& other);
+	PresidentialPardonForm&	operator=(const PresidentialPardonForm& other);
 
-	void                        execute(const Bureaucrat& bureaucrat) const;
+	void					execute(const Bureaucrat& bureaucrat) const;
 
 private:
 	PresidentialPardonForm(void);
 
-	std::string                 mTarget;
+	std::string				mTarget;
 };
 
 #endif

@@ -10,14 +10,14 @@ public:
 	RobotomyRequestForm(const RobotomyRequestForm& other);
 	virtual ~RobotomyRequestForm(void);
 
-	RobotomyRequestForm&        operator=(const RobotomyRequestForm& other);
+	RobotomyRequestForm&	operator=(const RobotomyRequestForm& other);
 
-	void		                execute(const Bureaucrat& bureaucrat) const;
+	void					execute(const Bureaucrat& bureaucrat) const;
 
 private:
 	RobotomyRequestForm(void);
 
-	std::string                 mTarget;
+	std::string				mTarget;
 };
 
 #endif
