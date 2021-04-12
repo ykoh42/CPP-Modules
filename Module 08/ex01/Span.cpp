@@ -1,4 +1,3 @@
-
 #include "Span.hpp"
 
 Span::Span(void)
