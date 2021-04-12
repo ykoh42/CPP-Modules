@@ -1,3 +1,4 @@
+
 #include "Span.hpp"
 
 Span::Span(void)
@@ -57,7 +58,11 @@ unsigned int			Span::shortestSpan(void) const
 	}
 	std::list<int>  tmp2(mList);
 	tmp2.sort();
-	return (*(++tmp2.begin()) - *tmp2.begin());
+
+	long	result[tmp2.size()];
+	std::adjacent_difference(tmp2.begin(), tmp2.end(), result);
+
+	return (*std::min_element(result + 1, result + tmp2.size()));
 }
 
 unsigned int			Span::longestSpan(void) const
