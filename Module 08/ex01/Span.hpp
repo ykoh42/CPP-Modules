@@ -2,7 +2,6 @@
 # define SPAN_HPP
 
 # include <list>
-# include <numeric>
 
 class Span
 {
